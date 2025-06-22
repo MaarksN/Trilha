@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Auto Arremate® / Arremaq 3.0 - Capa e Índices</title>
+
+    <link rel="stylesheet" href="src/assets/css/design-tokens.css">
+    <link rel="stylesheet" href="src/assets/css/base.css">
+    <link rel="stylesheet" href="src/assets/css/components.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="accessibility-controls">
+        <button id="increaseFontBtn" class="accessibility-btn" aria-label="Aumentar tamanho da fonte" title="Aumentar Fonte">
+            <i class="fas fa-search-plus"></i>
+        </button>
+        <button id="decreaseFontBtn" class="accessibility-btn" aria-label="Diminuir tamanho da fonte" title="Diminuir Fonte">
+            <i class="fas fa-search-minus"></i>
+        </button>
+        <button id="readPageBtn" class="accessibility-btn" aria-label="Ler página em voz alta" title="Ler Página">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <main id="main-portal-completo">
+        <section id="capa-section" class="capa-section" data-aos="fade-in" data-aos-duration="1200">
+            <div class="logos-container">
+                <img src="https://www.autoarremate.com.br/wp-content/uploads/2022/09/logo-horizontal-padrao.svg" alt="Logotipo da Auto Arremate" class="playbook-logo" data-aos="zoom-in" data-aos-delay="200" onerror="this.onerror=null; this.src='https://placehold.co/192x54/ffffff/16B097?text=Auto+Arremate&font=manrope'; this.alt='Logotipo Auto Arremate Indisponível';">
+                <img src="https://www.arremaq.com.br/wp-content/uploads/2021/01/Logotipo-Arremaqsuperbid.png" alt="Logotipo da Arremaq" class="playbook-logo" data-aos="zoom-in" data-aos-delay="300" onerror="this.onerror=null; this.src='https://placehold.co/192x54/ffffff/FF8C00?text=Arremaq&font=manrope'; this.alt='Logotipo Arremaq Indisponível';">
+            </div>
+            <h1 class="capa-title fun-title-effect" data-aos="fade-up" data-aos-delay="500">
+                <span class="capa-title-line"><span class="emoji-original-color">🏎️</span> TRILHA DE APRENDIZADO <span class="emoji-original-color">💨</span></span>
+                <span class="capa-title-line"><span class="emoji-original-color">⚡</span> SEU GUIA RELÂMPAGO <span class="emoji-original-color">💡</span></span>
+                <span class="capa-title-line"><span class="emoji-original-color">🎯</span> PARA UMA PERFORMANCE CAMPEÃ <span class="emoji-original-color">🏁</span></span>
+                <span class="capa-title-line"><span class="emoji-original-color">🏆</span> NA <span class="text-aa-green-darker">AUTO ARREMATE</span> E <span class="text-arremaq-orange-darker">ARREMAQ</span> <span class="emoji-original-color">🏅</span></span>
+            </h1>
+            <p class="frase-destaque frase-destaque-verde fun-frase-effect" data-aos="fade-up" data-aos-delay="700">
+                <span class="emoji">🚀</span> SÓ OS FORTES ACELERAM, MAS APENAS OS SÁBIOS DOMINAM A ARTE DE FREAR! <span class="emoji">🛑</span>
+            </p>
+            <p class="capa-criado" data-aos="fade-up" data-aos-delay="1000"> <span class="emoji">✨</span> Criado pelo <span class="emoji">👨‍💻</span> Analista de Operações - <strong class="creator-name">Marcelo do Nascimento</strong> <span class="emoji">🚀</span>
+            </p>
+            <button id="btnIniciarCapa" class="btn-iniciar" data-aos="fade-up" data-aos-delay="1100"> EMBARCAR NESSA CORRIDA ÉPICA!
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 1.2em; height: 1.2em;"><path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </button>
+            <div class="capa-social-links" data-aos="fade-up" data-aos-delay="1200">
+                <a href="https://facebook.com/auto-arremate" target="_blank" aria-label="Facebook Auto Arremate"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.autoarremate.com.br/podcast-dirigindo-vendas/" target="_blank" aria-label="Podcast Dirigindo Vendas" title="Podcast Dirigindo Vendas"><i class="fas fa-podcast"></i></a>
+                <a href="https://www.instagram.com/autoarremate/" target="_blank" aria-label="Instagram Auto Arremate"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/autoarremate/" target="_blank" aria-label="LinkedIn Auto Arremate"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/5511940366065" target="_blank" aria-label="WhatsApp Auto Arremate"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </section>
+
+        <section id="menu-principal-section" class="menu-principal-section hidden" data-aos="fade-in">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="menu-principal-title" data-aos="fade-down">
+                    <span class="emoji-original-color">🚦</span> CENTRAL DE COMANDO <span class="text-aa-green-darker">AUTO ARREMATE</span> & <span class="text-arremaq-orange-darker">ARREMAQ</span> <span class="emoji-original-color">🛠️</span>
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10 mt-12 md:mt-16">
+                    <div id="openManualPitStopBtn" class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                        <span class="menu-card-icon"><i class="fas fa-flag-checkered text-gray-600 dark:text-gray-400"></i></span>
+                        <h3 class="menu-card-title">
+                            <span class="emoji-original-color">🏁</span> ROTA DOS CAMPEÕES <span class="emoji-original-color">🏆</span>
+                        </h3>
+                    </div>
+                    <div id="openAcademiaRepassadoresBtn" class="menu-card" data-aos="fade-up" data-aos-delay="400">
+                        <span class="menu-card-icon"><i class="fas fa-graduation-cap text-red-500 dark:text-red-400"></i></span>
+                        <h3 class="menu-card-title">
+                           <span class="emoji-original-color">⛽</span> ACADEMIA DE REPASSADORES 3.0
+                        </h3>
+                    </div>
+                    <div id="generateCertificateCard" class="menu-card disabled certificate-card" data-aos="fade-up" data-aos-delay="500">
+                        <span class="menu-card-icon"><i class="fas fa-certificate text-yellow-500 dark:text-yellow-400"></i></span>
+                        <h3 class="menu-card-title">
+                           <span class="emoji-original-color">🏅</span> GERAR CERTIFICADO
+                        </h3>
+                        <p id="certificateProgress" class="text-sm text-gray-500 mt-4 dark:text-gray-400">
+                            Complete todos os módulos da trilha para gerar seu certificado.
+                        </p>
+                    </div>
+                </div>
+                <button id="backToCoverBtnMenu" class="btn-nav-playbook btn-outline mt-16 mx-auto">
+                    <i class="fas fa-arrow-left"></i> VOLTAR À CAPA
+                </button>
+            </div>
+        </section>
+
+        <section id="manual-pitstop-detalhes-section" class="manual-pitstop-detalhes-section hidden" data-aos="fade-in">
+            <div class="container mx-auto">
+                    <button class="btn-nav-playbook btn-outline back-to-menu-principal mb-10 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR AO MENU PRINCIPAL
+                </button>
+                <h2 class="manual-pitstop-main-title">
+                    <span class="emoji-original-color">🛠️</span> ROTA DOS CAMPEÕES: SEUS MÓDULOS DE ALTA PERFORMANCE <span class="emoji-original-color">🏆</span>
+                </h2>
+                <div id="playbookIndexContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 py-8">
+                    </div>
+            </div>
+        </section>
+
+        <section id="placeholder-content-section" class="playbook-sub-section hidden">
+             <div class="container mx-auto">
+                <button class="btn-nav-playbook btn-outline back-to-manual-pitstop-detalhes mb-10 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR AOS MÓDULOS
+                </button>
+                <h2 id="content-title-placeholder" class="text-2xl font-bold text-center my-8"></h2>
+                <p id="content-paragraph-placeholder" class="text-lg text-center"></p>
+             </div>
+        </section>
+
+    </main>
+
+    <div id="userInfoModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close-btn" role="button" aria-label="Fechar Modal">&times;</span>
+            <h2 class="modal-title">✨ Preencha Seus Dados para Iniciar sua jornada de aprendizado ✨</h2>
+            <form id="userInfoForm" class="modal-form">
+                <label for="fullName">Nome Completo:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Seu nome completo" class="form-input-base" required aria-required="true">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="seu.email@example.com" class="form-input-base" required aria-required="true">
+                <p class="text-sm text-red-500 hidden" id="emailError">Por favor, insira um email válido.</p>
+
+                <label for="entryDate">Data de Entrada:</label>
+                <input type="date" id="entryDate" name="entryDate" class="form-input-base" required aria-required="true">
+                <p class="text-sm text-red-500 hidden" id="dateError">Por favor, insira uma data válida.</p>
+
+                <label for="position">Cargo:</label>
+                <input type="text" id="position" name="position" placeholder="Seu cargo na empresa" class="form-input-base" required aria-required="true">
+
+                <button type="submit" class="btn btn-primary" aria-label="Iniciar Trilha de Aprendizado">INICIAR TRILHA</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="certificateModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close-btn" role="button" aria-label="Fechar Certificado">&times;</span>
+            <h2 class="certificate-header">PARABÉNS, CAMPEÃO(Ã)!</h2>
+            <p class="certificate-subheader">VOCÊ CONCLUIU A TRILHA DE APRENDIZADO!</p>
+            <div class="certificate-body">
+                <p>Certificamos que <strong><span id="certFullName"></span></strong>, em reconhecimento à sua dedicação e conclusão bem-sucedida de todos os módulos da "Trilha de Aprendizado: Seu Guia Relâmpago para uma Performance Campeã", demonstrando profundo conhecimento e preparo em seu cargo de <strong><span id="certPosition"></span></strong>.</p>
+                <p class="mt-4">Este certificado é um testemunho do seu compromisso com a excelência e o aprimoramento contínuo em suas atividades na Auto Arremate e Arremaq.</p>
+            </div>
+            <p class="certificate-footer">Emitido em <span id="certIssueDate"></span>.</p>
+            <button id="copyCertificateBtn" class="btn btn-primary">COPIAR CERTIFICADO</button>
+        </div>
+    </div>
+
+    <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Alternar tema" title="Alternar Tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" defer>
+        // Importar as funções dos arquivos JavaScript globais
+        import { initializeAudio, playSound, localStorageManager } from './src/assets/js/utils.js';
+        import { initializeThemeManager, applyTheme } from './src/assets/js/theme-manager.js';
+        import { initializeAccessibilityControls, adjustFontSize, readPageContent } from './src/assets/js/accessibility-manager.js';
+        import { showSection, initializeNavigation } from './src/assets/js/navigation-manager.js';
+
+        // Variável para controlar se o modal de informações do usuário já foi exibido e os dados preenchidos
+        let userDataSubmitted = false;
+
+        // --- Dados do Índice da Trilha (Atualizados) ---
+        const indexDataPlaybook = [
+            { id: "MODULO_1_PISTA_DECOLAGEM", emoji: "📜", title: "<strong>MÓD1: NOSSA PISTA DE DECOLAGEM</strong>: HISTÓRIA, VALORES E A FORÇA DA EQUIPE AUTO ARREMATE & ARREMAQ!", sub: "Conheça o motor que impulsiona a Auto Arremate & Arremaq: nossa cultura, missão e o time de campeões.", sentenceEmoji: "📜" },
+            { id: "MODULO_12_BOX_IDENTIDADE", emoji: "<span class='emoji-original-color'>🎨</span>", title: "<strong>MÓD2: BOX DA IDENTIDADE AUTO ARREMATE</strong>: CONSTRUINDO SUA MARCA!", sub: "Entenda os pilares da identidade visual e comunicação para fortalecer sua presença e impacto.", sentenceEmoji: "🎨" },
+            { id: "MODULO_2_POLE_POSITION", emoji: "<span class='emoji-original-color'>🚗</span>", title: "<strong>MÓD3: AUTO ARREMATE NA POLE POSITION</strong>: DOMINANDO O UNIVERSO DOS VEÍCULOS LEVES!", sub: "Descubra como nossa plataforma acelera a gestão e venda de veículos leves, da captação à comercialização.", sentenceEmoji: "🏆" },
+            { id: "MODULO_3_FORCA_BRUTA", emoji: "<span class='emoji-original-color'>🚜</span>", title: "<strong>MÓD4: ARREMAQ</strong>: A FORÇA BRUTA DOS GIGANTES DO AGRO E CONSTRUÇÃO!", sub: "Soluções de peso e estratégias robustas para o repasse eficiente de máquinas agrícolas e de construção.", sentenceEmoji: "⚙️" },
+            { id: "MODULO_4_CAMPEOES", emoji: "🎯", title: "<strong>MÓD5: MAPEANDO OS CAMPEÕES</strong>: NOSSOS CLIENTES IDEAIS AUTO ARREMATE & ARREMAQ (ICPS & PERSONAS)!", sub: "Identifique os perfis de clientes com maior potencial e as personas chave para uma abordagem estratégica.", sentenceEmoji: "🌟" },
+            { id: "MODULO_5_JORNADA_CLIENTE", emoji: "📊", title: "<strong>MÓD6: A JORNADA DO CLIENTE VENCEDOR AUTO ARREMATE & ARREMAQ</strong>: DA PROSPECÇÃO À BANDEIRADA FINAL (ANIMAÇÃO)!", sub: "Visualize a transformação do cliente, da necessidade à solução, através de nossa animação dinâmica.", sentenceEmoji: "🎬" },
+            { id: "MODULO_6_ACELERACAO_TATICA", emoji: "🚀", title: "<strong>MÓD7: ACELERAÇÃO TÁTICA TOTAL</strong>", sub: "Seu centro de comando para conectar, qualificar e converter. ✨ Todas as estratégias, para todas as personas, em um só lugar.", sentenceEmoji: "✨" },
+            { id: "MODULO_7_COMUNICACAO", emoji: "✍️", title: "<strong>MÓD8: A ARTE DA COMUNICAÇÃO ESTRATÉGICA AUTO ARREMATE & ARREMAQ</strong>: MODELOS QUE CONVERTEM!", sub: "Termos de impacto, orientações e exemplos práticos para uma comunicação persuasiva e eficaz.", sentenceEmoji: "🗣️" },
+            { id: "MODULO_8_GLOSSARIO", emoji: "📖", title: "<strong>MÓD9: DICIONÁRIO DOS MESTRES</strong>: GLOSSÁRIO AUTO ARREMATE & ARREMAQ!", sub: "Decifre os termos técnicos e jargões do mercado automotivo e de máquinas para dominar a linguagem do setor.", sentenceEmoji: "📚" },
+            { id: "MODULO_9_EVOLUCAO_CONTINUA", emoji: "📈", title: "<strong>MÓD10: EVOLUÇÃO CONTÍNUA</strong>: NOSSA TRILHA DE APRENDIZADO AUTO ARREMATE & ARREMAQ EM CONSTANTE APERFEIÇOAMENTO!", sub: "Os próximos passos para o desenvolvimento do playbook e o crescimento contínuo da nossa equipe.", sentenceEmoji: "🌌" },
+            { id: "MODULO_10_CENTRAL_COMANDO", emoji: "📞", title: "<strong>MÓD11: CENTRAL DE COMANDO AUTO ARREMATE & ARREMAQ</strong>: CANAIS DE CONTATO E SUPORTE ÁGIL!", sub: "Acesse nossos canais de suporte dedicados e encontre ajuda rápida para suas dúvidas e desafios.", sentenceEmoji: "🛠️" },
+            { id: "MODULO_11_DESAFIO_CAMPEOES", emoji: "🏆", title: "<strong>MÓD12: DESAFIO DOS CAMPEÕES AUTO ARREMATE</strong>: TESTE SEU CONHECIMENTO ESTRATÉGICO!", sub: "Teste sua sabedoria e astúcia em nosso quiz gamificado sobre o playbook e o universo do repasse!", sentenceEmoji: "🏅" },
+            { id: "MODULO_13_ACADEMIA_REPASSADORES", emoji: "🏎️💨", title: "<strong>MÓD13: ACADEMIA DE REPASSADORES AUTO ARREMATE & ARREMAQ</strong>: TURBINE SEU TALENTO PARA A VITÓRIA!", sub: "Seu acesso de elite ao conhecimento e ferramentas para vendas automotivas de alta performance.", sentenceEmoji: "🏁" },
+            { id: "CERTIFICADO", emoji: "🏅", title: "<strong>CERTIFICADO</strong>: IMPRIMA SEU PÓDIO!", sub: "Gere e imprima seu certificado de conclusão da Trilha de Aprendizado.", sentenceEmoji: "🏅" } // Adicionado CERTIFICADO
+        ];
+
+
+        const playbookIndexContainer = document.getElementById('playbookIndexContainer');
+
+        // Objeto para armazenar o progresso dos módulos
+        let trilhaProgress = {};
+
+        // Elementos do Modal de Informações do Usuário
+        const userInfoModal = document.getElementById('userInfoModal');
+        const userInfoForm = document.getElementById('userInfoForm');
+        const emailInput = document.getElementById('email');
+        const entryDateInput = document.getElementById('entryDate');
+        const emailError = document.getElementById('emailError');
+        const dateError = document.getElementById('dateError');
+
+        // Elementos do Modal de Certificado
+        const certificateModal = document.getElementById('certificateModal');
+        const certFullNameSpan = document.getElementById('certFullName');
+        const certPositionSpan = document.getElementById('certPosition');
+        const certIssueDateSpan = document.getElementById('certIssueDate');
+        const copyCertificateBtn = document.getElementById('copyCertificateBtn');
+
+        // Elementos do Card de Certificado no menu principal
+        const generateCertificateCard = document.getElementById('generateCertificateCard');
+        const certificateProgressText = document.getElementById('certificateProgress');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 900,
+                once: true,
+                offset: 80,
+                easing: 'ease-in-out'
+            });
+
+            // Inicializa gerenciadores globais
+            initializeAudio(); // A função já escuta por interações do usuário
+            initializeThemeManager('themeToggleBtn');
+            initializeAccessibilityControls('increaseFontBtn', 'decreaseFontBtn', 'readPageBtn', 'main-portal-completo'); // Ajustado para main-portal-completo
+
+            loadTrilhaProgress(); // Carrega o progresso ao iniciar
+            checkCertificateEligibility(); // Verifica o estado do certificado ao iniciar
+
+            // --- Listeners de Eventos de Navegação e Sons ---
+            document.getElementById('btnIniciarCapa').addEventListener('click', async (e) => {
+                e.preventDefault();
+                playSound('click');
+                if (!userDataSubmitted) {
+                    userInfoModal.classList.add('show');
+                } else {
+                    showSection('menu-principal-section');
+                }
+            });
+
+            // Listener para o card "ACADEMIA DE REPASSADORES 3.0"
+            document.getElementById('openAcademiaRepassadoresBtn').addEventListener('click', async (e) => {
+                e.preventDefault();
+                playSound('click');
+                showSection('MODULO_13_ACADEMIA_REPASSADORES'); // Navega para a seção da Academia
+            });
+
+            // Listener para o card "GERAR CERTIFICADO"
+            if (generateCertificateCard) {
+                generateCertificateCard.addEventListener('click', async () => {
+                    if (!generateCertificateCard.classList.contains('disabled')) {
+                        playSound('click');
+                        showCertificate();
+                    } else {
+                        console.log("A trilha não está completa. Certificado não pode ser gerado.");
+                    }
+                });
+            }
+
+            // --- Lógica do Modal de Informações do Usuário ---
+            const modalCloseBtn = userInfoModal.querySelector('.modal-close-btn');
+            if (modalCloseBtn) {
+                modalCloseBtn.addEventListener('click', () => {
+                    playSound('click');
+                    userInfoModal.classList.remove('show');
+                });
+            }
+
+            if (userInfoModal) {
+                userInfoModal.addEventListener('click', (e) => {
+                    if (e.target === userInfoModal) {
+                        playSound('click');
+                        userInfoModal.classList.remove('show');
+                    }
+                });
+            }
+
+            if (userInfoForm) {
+                userInfoForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    playSound('click');
+
+                    let isValid = true;
+                    if (!document.getElementById('fullName').value.trim()) { isValid = false; }
+                    if (!document.getElementById('position').value.trim()) { isValid = false; }
+                    if (!emailInput.validity.valid) { emailError.classList.remove('hidden'); isValid = false; } else { emailError.classList.add('hidden'); }
+                    if (!entryDateInput.validity.valid) { dateError.classList.remove('hidden'); isValid = false; } else { dateError.classList.add('hidden'); }
+
+                    if (!isValid) {
+                        console.log('Por favor, preencha todos os campos corretamente.');
+                        return;
+                    }
+
+                    const userData = {
+                        fullName: document.getElementById('fullName').value,
+                        email: document.getElementById('email').value,
+                        entryDate: document.getElementById('entryDate').value,
+                        position: document.getElementById('position').value
+                    };
+
+                    try {
+                        localStorageManager('trilhaUserData', userData); // Usa localStorageManager
+                        userDataSubmitted = true;
+                        userInfoModal.classList.remove('show');
+                        showSection('menu-principal-section');
+                        console.log('Dados do usuário salvos:', userData);
+                        checkCertificateEligibility();
+                    } catch (error) {
+                        console.error('Erro ao salvar dados do usuário:', error);
+                    }
+                });
+            }
+
+            // Carrega dados do usuário ao iniciar
+            try {
+                const storedUserData = localStorageManager('trilhaUserData'); // Usa localStorageManager
+                if (storedUserData) {
+                    userDataSubmitted = true;
+                    document.getElementById('fullName').value = storedUserData.fullName || '';
+                    document.getElementById('email').value = storedUserData.email || '';
+                    document.getElementById('entryDate').value = storedUserData.entryDate || '';
+                    document.getElementById('position').value = storedUserData.position || '';
+                }
+            } catch (error) {
+                console.warn("LocalStorage não disponível ou dados corrompidos para informações do usuário.");
+            }
+
+            // --- Lógica do Modal de Certificado ---
+            const certificateModalCloseBtn = certificateModal.querySelector('.modal-close-btn');
+            if (certificateModalCloseBtn) {
+                certificateModalCloseBtn.addEventListener('click', () => {
+                    playSound('click');
+                    certificateModal.classList.remove('show');
+                });
+            }
+
+            if (certificateModal) {
+                certificateModal.addEventListener('click', (e) => {
+                    if (e.target === certificateModal) {
+                        playSound('click');
+                        certificateModal.classList.remove('show');
+                    }
+                });
+            }
+
+            // No Capa e Índice, o botão de copiar certificado deve redirecionar para o módulo do certificado
+            if (copyCertificateBtn) {
+                copyCertificateBtn.addEventListener('click', async () => {
+                    playSound('click');
+                    showSection('CERTIFICADO'); // Leva para a página do certificado real
+                    certificateModal.classList.remove('show'); // Fecha o modal
+                });
+            }
+
+
+            /**
+             * Renderiza os cards do índice da trilha no container.
+             * Cada card representa um módulo e possui um listener para exibir seu conteúdo.
+             */
+            function renderPlaybookIndex() {
+                if (!playbookIndexContainer) return;
+                playbookIndexContainer.innerHTML = '';
+
+                indexDataPlaybook.forEach((item, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'index-item-card card-base'; // Adiciona 'card-base' para estilos consistentes
+                    card.setAttribute('data-aos', 'fade-up');
+                    card.setAttribute('data-aos-delay', (index * 100).toString());
+
+                    let emojiHtml = item.emoji.includes("<span") ? item.emoji : `<span class="emoji-original-color">${item.emoji}</span>`;
+
+                    // Adiciona classe 'completed' se o módulo estiver completo
+                    if (trilhaProgress[item.id]) {
+                        card.classList.add('completed'); // Uma classe para estilizar módulos completos no CSS
+                        card.innerHTML = `
+                            <span class="index-item-emoji">${emojiHtml}</span>
+                            <h3 class="index-item-title">${item.title}</h3>
+                            <p class="index-item-sub">
+                                ${item.sentenceEmoji ? `<span class="sentence-emoji emoji-original-color">${item.sentenceEmoji}</span>` : ''}
+                                ${item.sub}
+                            </p>
+                            <span class="absolute top-4 right-4 text-aa-green-darker dark:text-aa-green-lighter text-2xl" aria-label="Módulo Completo"><i class="fas fa-check-circle"></i></span>
+                        `;
+                    } else {
+                        card.innerHTML = `
+                            <span class="index-item-emoji">${emojiHtml}</span>
+                            <h3 class="index-item-title">${item.title}</h3>
+                            <p class="index-item-sub">
+                                ${item.sentenceEmoji ? `<span class="sentence-emoji emoji-original-color">${item.sentenceEmoji}</span>` : ''}
+                                ${item.sub}
+                            </p>`;
+                    }
+
+                    // Adiciona listener de clique para exibir a seção de conteúdo do módulo e marcar como completo
+                    card.addEventListener('click', async () => {
+                        playSound('click');
+                        // No futuro, aqui você faria o carregamento dinâmico do conteúdo do módulo ou
+                        // exibiria a seção específica do módulo, se ela já estiver no DOM.
+                        // Por agora, vamos usar o placeholder e marcar como completo.
+                        markModuleAsComplete(item.id);
+
+                        // Mapeia o ID do módulo para o ID da seção HTML correspondente
+                        const sectionMap = {
+                            "MODULO_1_PISTA_DECOLAGEM": "pista-decolagem-section",
+                            "MODULO_12_BOX_IDENTIDADE": "box-identidade-content-section",
+                            "MODULO_2_POLE_POSITION": "playbook-sec-1-content-main",
+                            "MODULO_3_FORCA_BRUTA": "playbook-sec-arremaq-content-main",
+                            "MODULO_4_CAMPEOES": "playbook-sec-2-content-main",
+                            "MODULO_5_JORNADA_CLIENTE": "jornada-cliente-aa-content-section",
+                            "MODULO_6_ACELERACAO_TATICA": "content-area-aceleracao", // Esta é a div principal do Módulo 6
+                            "MODULO_7_COMUNICACAO": "playbook-sec-7-content-main",
+                            "MODULO_8_GLOSSARIO": "playbook-sec-8-content-main",
+                            "MODULO_9_EVOLUCAO_CONTINUA": "playbook-sec-9-content-main",
+                            "MODULO_10_CENTRAL_COMANDO": "playbook-sec-10-content-main",
+                            "MODULO_11_DESAFIO_CAMPEOES": "playbook-sec-11-content-main",
+                            "MODULO_13_ACADEMIA_REPASSADORES": "academia-repassadores-content-section",
+                            "CERTIFICADO": "certificateContainer" // Mapeia para o ID do contêiner do certificado
+                        };
+                        const targetSectionId = sectionMap[item.id];
+                        if (targetSectionId) {
+                            showSection(targetSectionId); // Usa a função showSection do navigation-manager
+                        } else {
+                            // Se o ID do módulo não estiver mapeado para uma seção específica,
+                            // usa o placeholder ou exibe uma mensagem de erro
+                            document.getElementById('content-title-placeholder').innerHTML = item.title;
+                            document.getElementById('content-paragraph-placeholder').innerText = "Conteúdo para esta seção está em desenvolvimento ou não foi mapeado.";
+                            showSection('placeholder-content-section');
+                        }
+                    });
+
+                    playbookIndexContainer.appendChild(card);
+                });
+            }
+
+            // --- Funções de Lógica do Certificado e Progresso da Trilha ---
+            function loadTrilhaProgress() {
+                try {
+                    const storedProgress = localStorageManager('trilhaProgress');
+                    if (storedProgress) {
+                        trilhaProgress = storedProgress;
+                    } else {
+                        indexDataPlaybook.forEach(module => {
+                            trilhaProgress[module.id] = false;
+                        });
+                        localStorageManager('trilhaProgress', trilhaProgress);
+                    }
+                } catch (error) {
+                    console.warn("Erro ao carregar ou inicializar progresso da trilha:", error);
+                    indexDataPlaybook.forEach(module => { trilhaProgress[module.id] = false; });
+                    localStorageManager('trilhaProgress', trilhaProgress);
+                }
+            }
+
+            function saveTrilhaProgress() {
+                localStorageManager('trilhaProgress', trilhaProgress);
+            }
+
+            function markModuleAsComplete(moduleId) {
+                if (trilhaProgress.hasOwnProperty(moduleId) && !trilhaProgress[moduleId]) {
+                    trilhaProgress[moduleId] = true;
+                    saveTrilhaProgress();
+                    console.log(`Módulo ${moduleId} marcado como completo.`);
+                    checkCertificateEligibility();
+                }
+            }
+
+            function checkCertificateEligibility() {
+                const totalModules = indexDataPlaybook.length;
+                const completedModules = Object.values(trilhaProgress).filter(status => status).length;
+                const allModulesCompleted = completedModules === totalModules;
+
+                if (generateCertificateCard) {
+                    if (allModulesCompleted) {
+                        generateCertificateCard.classList.remove('disabled');
+                        generateCertificateCard.removeAttribute('aria-disabled');
+                        generateCertificateCard.style.cursor = 'pointer';
+                        certificateProgressText.textContent = 'Parabéns! Sua trilha está completa. Clique para gerar seu certificado!';
+                    } else {
+                        generateCertificateCard.classList.add('disabled');
+                        generateCertificateCard.setAttribute('aria-disabled', 'true');
+                        generateCertificateCard.style.cursor = 'not-allowed';
+                        certificateProgressText.textContent = `Complete ${totalModules - completedModules} módulos restantes para gerar seu certificado.`;
+                    }
+                }
+                renderPlaybookIndex();
+            }
+
+            function showCertificate() {
+                const userData = localStorageManager('trilhaUserData');
+                if (!userData) {
+                    console.error("Dados do usuário não encontrados para gerar o certificado.");
+                    userInfoModal.classList.add('show');
+                    return;
+                }
+
+                certFullNameSpan.textContent = userData.fullName || 'Nome do Usuário';
+                certPositionSpan.textContent = userData.position || 'Cargo não especificado';
+
+                const today = new Date();
+                const options = { day: '2-digit', month: 'long', year: 'numeric' };
+                certIssueDateSpan.textContent = today.toLocaleDateString('pt-BR', options);
+
+                certificateModal.classList.add('show');
+            }
+
+
+            // --- Inicialização da Capa e Índice ---
+            // Certifique-se de que a capa seja a primeira a ser mostrada
+            // A função showSection do navigation-manager cuidará de ocultar as outras.
+            showSection('capa-section');
+        });
+    </script>
+</body>
+</html>

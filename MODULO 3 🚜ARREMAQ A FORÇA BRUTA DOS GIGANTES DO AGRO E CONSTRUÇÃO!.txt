@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arremaq: A Força Bruta dos Gigantes</title>
+    <link rel="stylesheet" href="../src/assets/css/design-tokens.css">
+    <link rel="stylesheet" href="../src/assets/css/base.css">
+    <link rel="stylesheet" href="../src/assets/css/components.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    </head>
+<body>
+
+    <div class="accessibility-controls">
+        <button id="increaseFontBtn" class="accessibility-btn" aria-label="Aumentar tamanho da fonte" title="Aumentar Fonte">
+            <i class="fas fa-search-plus"></i>
+        </button>
+        <button id="decreaseFontBtn" class="accessibility-btn" aria-label="Diminuir tamanho da fonte" title="Diminuir Fonte">
+            <i class="fas fa-search-minus"></i>
+        </button>
+        <button id="readPageBtn" class="accessibility-btn" aria-label="Ler página em voz alta" title="Ler Página">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <main id="main-portal-completo">
+        <section id="playbook-sec-arremaq-content-main" class="playbook-sub-section" data-aos="fade-up">
+            <div class="container mx-auto px-4">
+                <button class="btn btn-outline back-to-manual-pitstop-detalhes mb-8 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR AO GUIA ESTRATÉGICO
+                </button>
+                <h2 class="playbook-content-title">
+                    <span class="emoji-original-color">🚜</span> <strong class="title-arremaq">ARREMAQ: A FORÇA BRUTA DOS GIGANTES DO AGRO E CONSTRUÇÃO!</strong>
+                </h2>
+                <div class="text-content-container playbook-text space-y-10 mt-8">
+                    <section id="intro-arremaq" data-aos="fade-up">
+                        <h3 class="playbook-section-title uppercase text-center">
+                            <span class="emoji">🏗️</span> <strong>O Território dos Titãs: Bem-vindo à Arremaq!</strong>
+                        </h3>
+                        <p class="max-w-4xl mx-auto text-left md:text-justify"><span class="sentence-emoji">🌟</span>Saudações, mestre construtor e gigante do agro! Adentre o universo Arremaq, onde a força bruta encontra a inteligência estratégica. <span class="sentence-emoji">🚜</span>Aqui, tratores, colheitadeiras, escavadeiras e todos os titãs de aço que movem o progresso encontram uma plataforma robusta para otimizar sua comercialização e gestão.</p>
+                        <p class="max-w-4xl mx-auto text-left md:text-justify"><span class="sentence-emoji">⚙️</span>Seja você uma concessionária de máquinas pesadas, uma locadora de equipamentos de construção ou um grande frotista do agronegócio, a Arremaq é seu parceiro de confiança para garantir que seus ativos mais valiosos sejam negociados com máxima eficiência e rentabilidade. <span class="sentence-emoji">🏆</span>Prepare-se para operar com a força de um trator e a precisão de um GPS agrícola!</p>
+                    </section>
+
+                    <hr class="my-10 border-t-2 border-gray-200 dark:border-gray-700/50">
+
+                    <section id="solucoes-arremaq" data-aos="fade-up">
+                        <h3 class="playbook-section-title text-center uppercase">
+                            <span class="emoji">🛠️</span> <strong>Nosso Arsenal Pesado: Soluções Sob Medida</strong>
+                        </h3>
+                        <p class="mb-8 max-w-3xl mx-auto text-left md:text-justify"><span class="sentence-emoji">🔩</span>Conheça as ferramentas que fazem da Arremaq a plataforma líder para o mercado de máquinas. É tecnologia de ponta para quem lida com o trabalho pesado!</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                           <div class="card-base" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card-base-icon">🔎</div>
+                                <h4 class="card-base-title">Raio-X para Máquinas</h4>
+                                <p class="card-base-description">Diagnósticos precisos com checklists detalhados e relatórios fotográficos completos, garantindo transparência total nas negociações.</p>
+                            </div>
+                            <div class="card-base" data-aos="fade-up" data-aos-delay="200">
+                                <div class="card-base-icon">🌐</div>
+                                <h4 class="card-base-title">Marketplace B2B para Gigantes</h4>
+                                <p class="card-base-description">Conectamos vendedores a compradores especializados em todo o Brasil, garantindo maior liquidez para seu estoque de máquinas pesadas.</p>
+                            </div>
+                            <div class="card-base" data-aos="fade-up" data-aos-delay="300">
+                                <div class="card-base-icon">📊</div>
+                                <h4 class="card-base-title">Dashboards de Performance</h4>
+                                <p class="card-base-description">Monitore sua frota, acompanhe o giro de estoque e tome decisões baseadas em dados para otimizar a rentabilidade dos seus ativos.</p>
+                            </div>
+                             <div class="card-base" data-aos="fade-up" data-aos-delay="400">
+                                <div class="card-base-icon">🔗</div>
+                                <h4 class="card-base-title">Integração com ERPs</h4>
+                                <p class="card-base-description">Sincronize nossa plataforma com seus sistemas de gestão para um fluxo de dados eficiente, evitando retrabalho e consolidando sua operação.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="highlight-box-base" data-aos="zoom-in-up">
+                        <div class="card-base-icon highlight-icon">📢</div>
+                        <h4 class="highlight-title">EQUIPE ARREMAQ, FORÇA TOTAL!</h4>
+                        <p class="highlight-text">
+                            <span class="sentence-emoji">🏗️</span> Vocês não vendem apenas máquinas; vocês oferecem a <strong>força que constrói o futuro e a tecnologia que alimenta a nação!</strong> <span class="sentence-emoji">🌱</span>
+                            Apresentem a Arremaq com a robustez de um gigante e a precisão de um engenheiro. Mostrem como nossa plataforma é a <strong>aliada estratégica para o sucesso dos titãs do agro e da construção!</strong> <span class="sentence-emoji">🚀</span> Vamos erguer impérios!
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="nav-buttons-container">
+                    <button class="btn btn-nav-playbook prev navigate-to-section" data-target-id="playbook-sec-1-content-main">❮ VOLTAR PARA AUTO ARREMATE</button>
+                    <button class="btn btn-nav-playbook next navigate-to-section" data-target-id="playbook-sec-2-content-main">AVANÇAR PARA CLIENTES IDEAIS ❯</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Alternar tema" title="Alternar Tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" defer>
+        // Importar as funções dos arquivos JavaScript globais
+        import { initializeAudio, playSound, localStorageManager } from '../src/assets/js/utils.js';
+        import { initializeThemeManager } from '../src/assets/js/theme-manager.js';
+        import { initializeAccessibilityControls } from '../src/assets/js/accessibility-manager.js';
+        import { showSection, initializeNavigation } from '../src/assets/js/navigation-manager.js';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({ duration: 900, once: true, offset: 80, easing: 'ease-in-out' });
+
+            initializeAudio();
+            initializeThemeManager('themeToggleBtn');
+            // Assumimos que o ID do container de conteúdo para leitura é 'main-portal-completo' ou similar
+            initializeAccessibilityControls('increaseFontBtn', 'decreaseFontBtn', 'readPageBtn', 'playbook-sec-arremaq-content-main');
+
+            // Listeners de navegação específicos deste módulo
+            initializeNavigation();
+
+            // Adicione aqui qualquer lógica específica que este módulo necessite
+            // Por exemplo, se MODULO_3_FORCA_BRUTA tinha alguma lógica que não seja navegação ou acessibilidade
+        });
+    </script>
+</body>
+</html>

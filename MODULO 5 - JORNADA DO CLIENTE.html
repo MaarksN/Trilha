@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada do Cliente</title>
+    <link rel="stylesheet" href="../src/assets/css/design-tokens.css">
+    <link rel="stylesheet" href="../src/assets/css/base.css">
+    <link rel="stylesheet" href="../src/assets/css/components.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    </head>
+<body>
+
+    <div class="accessibility-controls">
+        <button id="increaseFontBtn" class="accessibility-btn" aria-label="Aumentar tamanho da fonte" title="Aumentar Fonte">
+            <i class="fas fa-search-plus"></i>
+        </button>
+        <button id="decreaseFontBtn" class="accessibility-btn" aria-label="Diminuir tamanho da fonte" title="Diminuir Fonte">
+            <i class="fas fa-search-minus"></i>
+        </button>
+        <button id="readPageBtn" class="accessibility-btn" aria-label="Ler página em voz alta" title="Ler Página">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <main id="main-portal-completo">
+        <section id="jornada-cliente-aa-content-section" class="playbook-sub-section" data-aos="fade-in">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <button class="btn btn-outline back-to-manual-pitstop-detalhes mb-8 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR AO GUIA ESTRATÉGICO
+                </button>
+                <h2 class="playbook-content-title text-center mb-6">
+                    <span class="emoji-original-color">🗺️</span> PORTAL DA JORNADA DO CLIENTE VENDEDOR <span class="text-aa-green-darker">AUTO ARREMATE</span>
+                </h2>
+                <div class="jornada-explicacao mb-12 text-left md:text-center max-w-4xl mx-auto card-base">
+                    <p class="text-lg font-semibold text-aa-dark-blue dark:text-aa-green-lighter mb-4">
+                        <span class="emoji-original-color">🌟</span> Bem-vindo ao seu guia mestre para a Jornada do Cliente Vendedor na <span class="text-aa-green-darker">Auto Arremate®</span>!
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mb-3">
+                        <span class="emoji-original-color">🔍</span> Compreender profundamente cada etapa da experiência dos nossos clientes vendedores de repasses B2B é fundamental para o nosso sucesso mútuo. Este portal é o seu mapa estratégico, projetado para fornecer clareza e insights sobre como conduzimos os leads desde o interesse inicial até se tornarem parceiros valiosos e de longo prazo.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-3">
+                        <span class="emoji-original-color">📊</span> Abaixo, você encontrará os principais tipos de jornadas que gerenciamos. Cada card representa um fluxo estratégico, detalhando os objetivos, os pontos de contato cruciais, as interações chave e as ferramentas que empregamos para otimizar a venda do estoque de repasse do cliente, aumentar sua liquidez e rentabilidade.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        <span class="emoji-original-color">✨</span> <strong class="text-aa-green-darker dark:text-aa-green-text-dark-theme">Navegue por cada card para explorar os fluxos detalhados e todos os recursos associados a cada jornada específica.</strong> Prepare-se para dominar os caminhos que levam à excelência no atendimento e aos resultados campeões!
+                    </p>
+                </div>
+                <div id="jornadaClienteCardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                </div>
+            </div>
+        </section>
+
+        <section id="inbound30-content-main" class="hidden playbook-sub-section" data-aos="fade-up">
+            <div class="container mx-auto">
+                <button class="btn btn-outline back-to-manual-pitstop-detalhes mb-8 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR À JORNADA DO CLIENTE
+                </button>
+                <h2 class="playbook-content-title text-center">
+                    <span class="emoji-original-color">🚀</span> <strong>Jornada do Cliente Vendedor via INBOUND MARKETING (Pré-Contrato 0-30 Dias) - Auto Arremate®</strong>
+                </h2>
+                <div class="text-content-container playbook-text space-y-10 mt-8 card-base-content">
+                    <p class="text-center text-lg italic text-gray-700 dark:text-gray-300">
+                        <span class="emoji-original-color">🎯</span> Objetivo: Conduzir o lead qualificado (Gerente de Seminovos, Dono de Concessionária, Gerente de Desmobilização/Frota de Locadora), que demonstrou interesse inicial através dos canais de inbound, até à assinatura do contrato. 🤝 O foco é demonstrar claramente como a Auto Arremate® otimiza a venda do seu stock de repasse, aumenta a liquidez e a rentabilidade.
+                    </p>
+
+                    <div class="organograma-wrapper card-base">
+                        <div class="flow-node start-node" data-aos="zoom-in">
+                            🎯 <strong>Início da Jornada:</strong> Cliente com Necessidade de Repasse
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🌱 Atração, Conscientização e Levantada de Mão (Dias 1-7)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🏁</span> O objetivo aqui é atrair potenciais clientes vendedores através de conteúdo relevante, fazê-los tomar conhecimento da Auto Arremate® e identificar aqueles que estão prontos para uma conversa.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound30" data-interaction-id="inbound30_s1_i1">
+                                <summary class="interactive-summary">
+                                    <h4>📚 Consumo de Conteúdo Relevante</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Blog, LinkedIn, Webinars, Materiais Ricos. | Resp: Marketing.</p>
+                                    <p>Este ponto de contato visa educar o lead sobre o mercado de repasse e as soluções da Auto Arremate. O conteúdo deve focar em dores e oportunidades, posicionando a Auto Arremate como especialista e solução. Utilizar o Google Analytics e ferramentas de CRM para monitorar o engajamento do lead.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound30" data-interaction-id="inbound30_s1_i2">
+                                <summary class="interactive-summary">
+                                    <h4>🙋 Levantada de Mão (Pedido de Contato/Demonstração)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Formulário no site, CTA em e-mails. | Resp: Marketing, SDR/BDR.</p>
+                                    <p>O lead preenche um formulário solicitando mais informações ou uma demonstração. É um sinal claro de interesse. O SDR/BDR deve ser notificado imediatamente para realizar o primeiro contato de qualificação.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🔎 Qualificação e Descoberta (Dias 5-15)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> O objetivo é entender profundamente as necessidades, dores, processos atuais e o potencial de venda do lead Inbound, qualificando-o como uma oportunidade real.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound30" data-interaction-id="inbound30_s2_i1">
+                                <summary class="interactive-summary">
+                                    <h4>📞 Contacto Inicial e Agendamento da Reunião de Descoberta (SDR/BDR)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Ligação telefónica, E-mail. | Resp: SDR/BDR.</p>
+                                    <p>O SDR/BDR faz o primeiro contato para qualificar o lead (uso de metodologias como SPIN Selling ou SNAP Selling) e agendar uma reunião de descoberta com o Executivo de Contas. Registrar tudo no CRM.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound30" data-interaction-id="inbound30_s2_i2">
+                                <summary class="interactive-summary">
+                                    <h4>💬 Reunião de Descoberta (Executivo de Contas/Closer)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada. | Resp: Executivo de Contas/Closer.</p>
+                                    <p>O Executivo de Contas aprofunda o entendimento das dores do cliente, seus objetivos e o cenário atual. É crucial identificar o perfil da empresa, volume de repasse e decisores.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">💡 Apresentação da Solução e Proposta (Dias 10-25)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> O objetivo é demonstrar de forma personalizada como a Auto Arremate® resolve as dores específicas do cliente vendedor e apresentar uma proposta de valor clara.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound30" data-interaction-id="inbound30_s3_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🖥️ Demonstração Personalizada da Plataforma (Executivo de Contas)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada com compartilhamento de tela. | Resp: Executivo de Contas/Closer.</p>
+                                    <p>Apresentação focada em como as funcionalidades da Auto Arremate (RaioX, Marketplace, Dashboards) resolvem as dores identificadas na reunião de descoberta. Mostrar o fluxo de ponta a ponta e o ROI.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound30" data-interaction-id="inbound30_s3_i2">
+                                <summary class="interactive-summary">
+                                    <h4>📄 Envio da Proposta Comercial</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail. | Resp: Executivo de Contas/Closer.</p>
+                                    <p>A proposta deve ser clara, concisa e alinhada com as necessidades do cliente. Destacar os termos da parceria e os benefícios financeiros.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🤝 Negociação e Fechamento (Dias 20-30)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🤝</span> O objetivo é alinhar expectativas, superar últimas objeções e formalizar a parceria com o cliente vendedor.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound30" data-interaction-id="inbound30_s4_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🗣️ Reunião de Follow-up da Proposta e Negociação</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada, ligação, e-mail. | Resp: Executivo de Contas/Closer, COO/Diretor Comercial (se necessário).</p>
+                                    <p>Responder a dúvidas, negociar termos, e usar técnicas de fechamento para selar o acordo. Envolver a liderança se houver objeções complexas ou necessidade de aprovações.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound30" data-interaction-id="inbound30_s4_i2">
+                                <summary class="interactive-summary">
+                                    <h4>🎉 Fechamento e Assinatura do Contrato</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Plataforma de Assinatura Eletrónica. | Resp: Executivo de Contas/Closer, Jurídico, Financeiro, CS.</p>
+                                    <p>Formalização da parceria. O CS (Customer Success) deve ser introduzido para iniciar o processo de onboarding.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+                        <div class="flow-node end-node" data-aos="zoom-in">
+                            🌟 <strong>Fim da Jornada (Pré-Contrato):</strong> Cliente Pronto para Próximos Passos
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-buttons-container">
+                    <button class="btn btn-nav-playbook prev navigate-to-section" data-target-id="outbound90-content-main">❮ JORNADA ANTERIOR</button>
+                    <button class="btn btn-nav-playbook next navigate-to-section" data-target-id="outbound30-content-main">PRÓXIMA JORNADA ❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="outbound30-content-main" class="hidden playbook-sub-section" data-aos="fade-up">
+            <div class="container mx-auto">
+                <button class="btn btn-outline back-to-manual-pitstop-detalhes mb-8 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR À JORNADA DO CLIENTE
+                </button>
+                <h2 class="playbook-content-title text-center">
+                    <span class="emoji-original-color">🎯</span> <strong>Jornada do Cliente Vendedor via OUTBOUND MARKETING (Pré-Contrato 0-30 Dias) - Auto Arremate®</strong>
+                </h2>
+                <div class="text-content-container playbook-text space-y-10 mt-8 card-base-content">
+                    <p class="text-center text-lg italic text-gray-700 dark:text-gray-300">
+                        <span class="emoji-original-color">🏹</span> Objetivo: Atingir proativamente leads qualificados (Gerentes de Seminovos, Donos de Concessionária, Gerentes de Frota), demonstrando rapidamente o valor da Auto Arremate® para otimizar a venda do seu stock de repasse e fechar o contrato em até 30 dias.
+                    </p>
+
+                    <div class="organograma-wrapper card-base">
+                        <div class="flow-node start-node" data-aos="zoom-in">
+                            🎯 <strong>Início da Jornada:</strong> Cliente com Necessidade de Repasse
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">✨ Prospecção Ativa e Despertar do Interesse (Dias 1-10)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🏁</span> Identificar e abordar proativamente potenciais clientes vendedores, apresentando a Auto Arremate® como uma solução valiosa e conseguindo uma primeira interação positiva.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound30" data-interaction-id="outbound30_s1_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🗺️ Pesquisa e Identificação de Leads (SDR/BDR)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: LinkedIn Sales Navigator, bases de dados de concessionárias/locadoras, notícias do setor, indicações. | Resp: SDR/BDR.</p>
+                                    <p>O SDR/BDR realiza pesquisa aprofundada para encontrar leads que se encaixam no ICP. Utilizar ferramentas de prospecção e o CRM para registrar as informações.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="outbound30" data-interaction-id="outbound30_s1_i2">
+                                <summary class="interactive-summary">
+                                    <h4>📞 Primeiro Contacto e Conexão (SDR/BDR)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Cadência de 3-5 toques (e-mail, telefone, LinkedIn). | Resp: SDR/BDR.</p>
+                                    <p>O SDR/BDR inicia o contato com mensagens personalizadas que focam na dor do cliente. O objetivo é agendar a reunião de qualificação. Registrar tudo no CRM.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🔎 Qualificação e Descoberta Acelerada (Dias 7-20)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> Validar rapidamente o fit do lead, entender os seus desafios principais na venda de repasse e identificar como a Auto Arremate® pode gerar valor imediato.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound30" data-interaction-id="outbound30_s2_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🚀 Reunião de Qualificação/Descoberta (Executivo de Contas)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada. | Resp: Executivo de Contas/Closer.</p>
+                                    <p>Foco em validar as necessidades e o potencial do lead. Uso de metodologias como SPIN ou SNAP Selling para guiar a conversa e identificar oportunidades claras.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">💡 Apresentação da Solução e Proposta Direta (Dias 15-25)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> Demonstrar de forma focada como a Auto Arremate® resolve as dores do cliente e apresentar uma proposta clara e objetiva.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound30" data-interaction-id="outbound30_s3_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🎬 Demonstração Direcionada da Plataforma</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada com compartilhamento de tela. | Resp: Executivo de Contas/Closer.</p>
+                                    <p>Apresentação ágil e direta, focando nas funcionalidades que resolvem as dores mais urgentes do cliente. Reforçar o ROI.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="outbound30" data-interaction-id="outbound30_s3_i2">
+                                <summary class="interactive-summary">
+                                    <h4>✉️ Envio da Proposta Comercial Objetiva</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail. | Resp: Executivo de Contas/Closer.</p>
+                                    <p>Proposta concisa, destacando os pontos de valor e os termos comerciais.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🤝 Negociação Ágil e Fechamento (Dias 20-30)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🤝</span> Alinhar rapidamente as expectativas, superar objeções finais e formalizar a parceria.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound30" data-interaction-id="outbound30_s4_i1">
+                                <summary class="interactive-summary">
+                                    <h4>⚡ Reunião de Follow-up e Negociação Rápida</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada, ligação, e-mail. | Resp: Executivo de Contas/Closer.</p>
+                                    <p>Foco em resolver rapidamente quaisquer pendências e fechar o negócio.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="outbound30" data-interaction-id="outbound30_s4_i2">
+                                <summary class="interactive-summary">
+                                    <h4>✅ Fechamento e Assinatura do Contrato</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Assinatura Eletrónica. | Resp: Executivo de Contas/Closer, Jurídico, CS.</p>
+                                    <p>Conclusão da venda. Preparar para o onboarding com o CS.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+                        <div class="flow-node end-node" data-aos="zoom-in">
+                            🌟 <strong>Fim da Jornada (Pré-Contrato):</strong> Cliente Pronto para Próximos Passos
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-buttons-container">
+                    <button class="btn btn-nav-playbook prev navigate-to-section" data-target-id="inbound30-content-main">❮ JORNADA ANTERIOR</button>
+                    <button class="btn btn-nav-playbook next navigate-to-section" data-target-id="inbound60-content-main">PRÓXIMA JORNADA ❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="inbound60-content-main" class="hidden playbook-sub-section" data-aos="fade-up">
+            <div class="container mx-auto">
+                <button class="btn btn-outline back-to-manual-pitstop-detalhes mb-8 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR À JORNADA DO CLIENTE
+                </button>
+                <h2 class="playbook-content-title text-center">
+                    <span class="emoji-original-color">🌟</span> <strong>Jornada do Cliente Vendedor via INBOUND MARKETING (Pré-Contrato 0-60 Dias) - Auto Arremate®</strong>
+                </h2>
+                <div class="text-content-container playbook-text space-y-10 mt-8 card-base-content">
+                    <p class="text-center text-lg italic text-gray-700 dark:text-gray-300">
+                        <span class="emoji-original-color">🚀</span> Objetivo: Conduzir o lead qualificado, que demonstrou interesse inicial, até à assinatura do contrato num ciclo de até 60 dias. 🤝 Foco em nutrir o interesse e demonstrar valor de forma consistente.
+                    </p>
+
+                    <div class="organograma-wrapper card-base">
+                        <div class="flow-node start-node" data-aos="zoom-in">
+                            🎯 <strong>Início da Jornada:</strong> Cliente com Necessidade de Repasse
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🌱 Atração, Conscientização, Levantada de Mão e Nutrição Inicial (Dias 1-10)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🏁</span> Atrair potenciais clientes através de conteúdo, gerar conhecimento da marca e identificar os que estão prontos para conversar.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound60" data-interaction-id="inbound60_s1_i1">
+                                <summary class="interactive-summary">
+                                    <h4>📰 Consumo de Conteúdo Inicial</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Blog, LinkedIn, Materiais Ricos. | Resp: Marketing.</p>
+                                    <p>O lead consome conteúdo relevante da Auto Arremate. É o primeiro contato com a marca, gerando conscientização e interesse.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound60" data-interaction-id="inbound60_s1_i2">
+                                <summary class="interactive-summary">
+                                    <h4>👆 Levantada de Mão (Pedido de Info/Demo)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Formulário no site, CTAs. | Resp: Marketing, SDR/BDR.</p>
+                                    <p>O lead manifesta interesse direto. Notificação imediata ao SDR/BDR para contato de qualificação.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🔎 Qualificação e Descoberta Detalhada (Dias 11-30)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> Entender as necessidades, dores e potencial do lead, qualificando-o como oportunidade e construindo relacionamento.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound60" data-interaction-id="inbound60_s2_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🗣️ Contacto Inicial e Agendamento (SDR/BDR)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Telefone, E-mail. | Resp: SDR/BDR.</p>
+                                    <p>O SDR/BDR realiza o primeiro contato. O objetivo é qualificar o lead e agendar uma reunião de descoberta aprofundada com o Executivo de Contas. Registrar no CRM.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound60" data-interaction-id="inbound60_s2_i2">
+                                <summary class="interactive-summary">
+                                    <h4>💡 Reunião de Descoberta Aprofundada (Executivo Contas)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada. | Resp: Executivo Contas.</p>
+                                    <p>O Executivo de Contas aprofunda o entendimento do cliente, seus processos e desafios. Identificar decisores e influenciadores.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">💡 Apresentação da Solução e Proposta Consultiva (Dias 31-50)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> Demonstrar como a Auto Arremate® resolve os problemas do cliente e apresentar uma proposta de valor robusta.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound60" data-interaction-id="inbound60_s3_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🎬 Demonstração Personalizada e Detalhada</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada. | Resp: Executivo Contas.</p>
+                                    <p>Apresentação detalhada da plataforma, focando em casos de uso específicos do cliente e na demonstração de funcionalidades chave (RaioX, Dashboards, Marketplace).</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound60" data-interaction-id="inbound60_s3_i2">
+                                <summary class="interactive-summary">
+                                    <h4>📈 Envio da Proposta Comercial e Follow-up Estratégico</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Telefone. | Resp: Executivo Contas.</p>
+                                    <p>Acompanhamento da proposta, esclarecimento de dúvidas e negociação. Manter o relacionamento ativo, enviando conteúdos complementares.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🤝 Negociação e Fechamento (Dias 51-60)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🤝</span> Alinhar expectativas, superar objeções e formalizar a parceria.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound60" data-interaction-id="inbound60_s4_i1">
+                                <summary class="interactive-summary">
+                                    <h4>⚖️ Reunião de Negociação e Ajustes</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada, E-mail. | Resp: Executivo Contas, Direção (se necessário).</p>
+                                    <p>Resolver objeções finais e alinhar os termos contratuais. Envolver a liderança para acelerar o processo, se necessário.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound60" data-interaction-id="inbound60_s4_i2">
+                                <summary class="interactive-summary">
+                                    <h4>✍️ Fechamento e Assinatura do Contrato</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Assinatura Eletrónica. | Resp: Executivo Contas, Jurídico, CS.</p>
+                                    <p>Formalização da venda. O CS (Customer Success) inicia o planejamento do onboarding para garantir uma transição suave e o sucesso do cliente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+                        <div class="flow-node end-node" data-aos="zoom-in">
+                            🌟 <strong>Fim da Jornada (Pré-Contrato):</strong> Cliente Pronto para Próximos Passos
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-buttons-container">
+                    <button class="btn btn-nav-playbook prev navigate-to-section" data-target-id="outbound30-content-main">❮ JORNADA ANTERIOR</button>
+                    <button class="btn btn-nav-playbook next navigate-to-section" data-target-id="outbound60-content-main">PRÓXIMA JORNADA ❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="outbound60-content-main" class="hidden playbook-sub-section" data-aos="fade-up">
+            <div class="container mx-auto">
+                <button class="btn btn-outline back-to-manual-pitstop-detalhes mb-8 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR À JORNADA DO CLIENTE
+                </button>
+                <h2 class="playbook-content-title text-center">
+                    <span class="emoji-original-color">🎯</span> <strong>Jornada do Cliente Vendedor via OUTBOUND MARKETING (Pré-Contrato 0-60 Dias) - Auto Arremate®</strong>
+                </h2>
+                <div class="text-content-container playbook-text space-y-10 mt-8 card-base-content">
+                    <p class="text-center text-lg italic text-gray-700 dark:text-gray-300">
+                        <span class="emoji-original-color">🏹</span> Objetivo: Abordar e conduzir leads qualificados até ao fecho em 60 dias, nutrindo o relacionamento e demonstrando valor de forma proativa.
+                    </p>
+
+                    <div class="organograma-wrapper card-base">
+                        <div class="flow-node start-node" data-aos="zoom-in">
+                            🎯 <strong>Início da Jornada:</strong> Cliente com Necessidade de Repasse
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">✨ Prospecção Ativa e Despertar do Interesse (Dias 1-15)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🏁</span> Identificar, abordar e estabelecer uma conexão inicial com potenciais clientes, apresentando a Auto Arremate®.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound60" data-interaction-id="outbound60_s1_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🗺️ Pesquisa e Segmentação de Leads (SDR/BDR)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: LinkedIn Sales Navigator, Bases de dados. | Resp: SDR/BDR.</p>
+                                    <p>Pesquisa detalhada de leads com base no ICP. Utilizar ferramentas de prospecção para segmentar e qualificar.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="outbound60" data-interaction-id="outbound60_s1_i2">
+                                <summary class="interactive-summary">
+                                    <h4>📞 Cadência de Primeiro Contacto e Conexão (SDR/BDR)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Telefone, LinkedIn. | Resp: SDR/BDR.</p>
+                                    <p>Implementar cadências de contato outbound personalizadas para gerar interesse e agendar uma reunião de qualificação.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🔎 Qualificação e Descoberta Aprofundada (Dias 16-35)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> Validar o fit do lead, entender os seus desafios e identificar como a Auto Arremate® pode gerar valor.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound60" data-interaction-id="outbound60_s2_i1">
+                                <summary class="interactive-summary">
+                                    <h4>💡 Reunião de Qualificação/Descoberta (Executivo Contas)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada. | Resp: Executivo Contas.</p>
+                                    <p>Reunião focada em aprofundar o entendimento das necessidades e dores do cliente, usando metodologias de vendas consultivas.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="outbound60" data-interaction-id="outbound60_s2_i2">
+                                <summary class="interactive-summary">
+                                    <h4>nurturing Follow-up e Nutrição Pós-Descoberta</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Conteúdo Relevante. | Resp: Executivo Contas.</p>
+                                    <p>Envio de conteúdos personalizados (cases de sucesso, artigos) para nutrir o lead e manter o engajamento até a próxima etapa.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">💡 Apresentação da Solução e Proposta (Dias 36-50)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> Demonstrar de forma personalizada como a Auto Arremate® resolve as dores do cliente e apresentar uma proposta de valor.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound60" data-interaction-id="outbound60_s3_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🎬 Demonstração Detalhada da Plataforma</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada. | Resp: Executivo Contas.</p>
+                                    <p>Apresentação aprofundada da plataforma, mostrando como as funcionalidades se aplicam diretamente às necessidades do cliente.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="outbound60" data-interaction-id="outbound60_s3_i2">
+                                <summary class="interactive-summary">
+                                    <h4>✉️ Envio da Proposta Comercial e Alinhamento</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Telefone. | Resp: Executivo Contas.</p>
+                                    <p>Envio da proposta e follow-up ativo para esclarecer dúvidas e alinhar expectativas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🤝 Negociação e Fechamento (Dias 51-60)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🤝</span> Alinhar expectativas, superar objeções e formalizar a parceria.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound60" data-interaction-id="outbound60_s4_i1">
+                                <summary class="interactive-summary">
+                                    <h4>⚖️ Reunião de Negociação e Ajustes</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada, E-mail. | Resp: Executivo Contas, Direção (se necessário).</p>
+                                    <p>Negociação de termos e condições, resolvendo quaisquer objeções finais para avançar para o fechamento.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="outbound60" data-interaction-id="outbound60_s4_i2">
+                                <summary class="interactive-summary">
+                                    <h4>🎉 Fechamento e Assinatura do Contrato</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Assinatura Eletrónica. | Resp: Executivo Contas, Jurídico, CS.</p>
+                                    <p>Assinatura do contrato e transição para a equipe de Customer Success para o onboarding.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+                        <div class="flow-node end-node" data-aos="zoom-in">
+                            🌟 <strong>Fim da Jornada (Pré-Contrato):</strong> Cliente Pronto para Próximos Passos
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-buttons-container">
+                    <button class="btn btn-nav-playbook prev navigate-to-section" data-target-id="inbound60-content-main">❮ JORNADA ANTERIOR</button>
+                    <button class="btn btn-nav-playbook next navigate-to-section" data-target-id="inbound90-content-main">PRÓXIMA JORNADA ❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="inbound90-content-main" class="hidden playbook-sub-section" data-aos="fade-up">
+            <div class="container mx-auto">
+                <button class="btn btn-outline back-to-manual-pitstop-detalhes mb-8 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR À JORNADA DO CLIENTE
+                </button>
+                <h2 class="playbook-content-title text-center">
+                    <span class="emoji-original-color">🌟</span> <strong>Jornada do Cliente Vendedor via INBOUND MARKETING (Pré-Contrato 0-90 Dias) - Auto Arremate®</strong>
+                </h2>
+                <div class="text-content-container playbook-text space-y-10 mt-8 card-base-content">
+                    <p class="text-center text-lg italic text-gray-700 dark:text-gray-300">
+                        <span class="emoji-original-color">🚀</span> Objetivo: Conduzir o lead qualificado até à assinatura do contrato num ciclo de até 90 dias, com foco na educação contínua e construção de um relacionamento sólido.
+                    </p>
+
+                    <div class="organograma-wrapper card-base">
+                        <div class="flow-node start-node" data-aos="zoom-in">
+                            🎯 <strong>Início da Jornada:</strong> Cliente com Necessidade de Repasse
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🌱 Atração, Conscientização, Levantada de Mão e Nutrição Inicial (Dias 1-20)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🏁</span> Atrair, educar e identificar leads prontos para uma conversa, nutrindo-os ao longo do tempo.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound90" data-interaction-id="inbound90_s1_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🌍 Consumo de Conteúdo Amplo e Engajamento Progressivo</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Blog, LinkedIn, Webinars, Materiais Ricos, Calculadoras ROI. | Resp: Marketing.</p>
+                                    <p>O lead interage com diversos conteúdos, aprofundando seu conhecimento sobre a Auto Arremate e suas soluções. O engajamento é monitorado para identificar o momento certo para uma abordagem mais direta.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound90" data-interaction-id="inbound90_s1_i2">
+                                <summary class="interactive-summary">
+                                    <h4>🙋 Levantada de Mão (Pedido de Info/Demo/Teste Avançado)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Formulários específicos, CTAs em nutrição avançada, Chat. | Resp: Marketing, SDR/BDR.</p>
+                                    <p>O lead demonstra um nível mais avançado de interesse, solicitando um contato ou test-drive.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🔎 Qualificação Consultiva e Mapeamento de Cenário (Dias 21-50)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> Realizar uma qualificação profunda, entender o cenário completo do cliente e começar a construir o caso de valor.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound90" data-interaction-id="inbound90_s2_i1">
+                                <summary class="interactive-summary">
+                                    <h4>📞 Contacto Pós-Levantada de Mão e Agendamento (SDR/BDR)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Telefone, E-mail personalizado. | Resp: SDR/BDR.</p>
+                                    <p>O SDR/BDR realiza um contato mais consultivo, focando em entender as prioridades do cliente e o agendamento de reuniões com os Executivos de Contas.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound90" data-interaction-id="inbound90_s2_i2">
+                                <summary class="interactive-summary">
+                                    <h4>🗺️ Reuniões de Descoberta e Mapeamento de Stakeholders (Executivo Contas)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada, Reuniões Presenciais (estratégicas). | Resp: Executivo Contas.</p>
+                                    <p>Múltiplas reuniões para mapear a estrutura da empresa, identificar todos os decisores e influenciadores, e aprofundar o entendimento das dores e necessidades.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">💡 Apresentação da Solução Estratégica e Construção de Consenso (Dias 51-75)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> Apresentar a Auto Arremate® como parceira estratégica, alinhando com objetivos de longo prazo e obtendo buy-in dos decisores.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound90" data-interaction-id="inbound90_s3_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🎬 Demonstração Estratégica e Workshop de Valor</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada, Apresentação Presencial. | Resp: Executivo Contas.</p>
+                                    <p>Demonstração customizada para os diferentes stakeholders, focando em como a Auto Arremate resolve as dores de cada área. Pode incluir um workshop para discutir o ROI.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound90" data-interaction-id="inbound90_s3_i2">
+                                <summary class="interactive-summary">
+                                    <h4>📈 Envio e Apresentação da Proposta Comercial Final</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Reunião de apresentação. | Resp: Executivo Contas.</p>
+                                    <p>Proposta detalhada e formal, com todos os termos e condições. Apresentação para a diretoria, se necessário, reforçando o valor estratégico.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🤝 Negociação Final, Alinhamento Jurídico/Financeiro e Fechamento (Dias 76-90)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🤝</span> Finalizar detalhes contratuais, obter aprovações e formalizar a parceria de longo prazo.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="inbound90" data-interaction-id="inbound90_s4_i1">
+                                <summary class="interactive-summary">
+                                    <h4>⚖️ Reuniões de Negociação Final e Alinhamentos Contratuais</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada, E-mail, Envolvimento Jurídico. | Resp: Executivo Contas, Direção, Jurídico.</p>
+                                    <p>Últimos ajustes e negociações de termos. Envolvimento de áreas como jurídico e financeiro para aprovações finais.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="inbound90" data-interaction-id="inbound90_s4_i2">
+                                <summary class="interactive-summary">
+                                    <h4>🎉 Fechamento e Assinatura do Contrato</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Assinatura Eletrónica. | Resp: Executivo Contas, Jurídico, Financeiro, CS.</p>
+                                    <p>Assinatura do contrato e transição para o time de Customer Success para o processo de onboarding e relacionamento de longo prazo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+                        <div class="flow-node end-node" data-aos="zoom-in">
+                            🌟 <strong>Fim da Jornada (Pré-Contrato):</strong> Cliente Pronto para Próximos Passos
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-buttons-container">
+                    <button class="btn btn-nav-playbook prev navigate-to-section" data-target-id="outbound60-content-main">❮ JORNADA ANTERIOR</button>
+                    <button class="btn btn-nav-playbook next navigate-to-section" data-target-id="outbound90-content-main">PRÓXIMA JORNADA ❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="outbound90-content-main" class="hidden playbook-sub-section" data-aos="fade-up">
+            <div class="container mx-auto">
+                <button class="btn btn-outline back-to-manual-pitstop-detalhes mb-8 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR À JORNADA DO CLIENTE
+                </button>
+                <h2 class="playbook-content-title text-center">
+                    <span class="emoji-original-color">🎯</span> <strong>Jornada do Cliente Vendedor via OUTBOUND MARKETING (Pré-Contrato 0-90 Dias) - Auto Arremate®</strong>
+                </h2>
+                <div class="text-content-container playbook-text space-y-10 mt-8 card-base-content">
+                    <p class="text-center text-lg italic text-gray-700 dark:text-gray-300">
+                        <span class="emoji-original-color">🏹</span> Objetivo: Abordar e conduzir leads qualificados até ao fecho em 90 dias, com uma abordagem consultiva e construção de relacionamento de longo prazo.
+                    </p>
+
+                    <div class="organograma-wrapper card-base">
+                        <div class="flow-node start-node" data-aos="zoom-in">
+                            🎯 <strong>Início da Jornada:</strong> Cliente com Necessidade de Repasse
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">✨ Prospecção Ativa, Conexão e Despertar Inicial do Interesse (Dias 1-20)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🏁</span> Identificar, abordar e estabelecer uma conexão inicial com potenciais clientes, apresentando a Auto Arremate® como solução relevante.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound90" data-interaction-id="outbound90_s1_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🗺️ Pesquisa Aprofundada e Identificação de Leads (SDR/BDR)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: LinkedIn Sales Navigator, Bases de dados, Relatórios de Mercado. | Resp: SDR/BDR.</p>
+                                    <p>Realizar pesquisa exaustiva para identificar leads de alto potencial. Utilizar dados para personalizar a abordagem inicial.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="outbound90" data-interaction-id="outbound90_s1_i2">
+                                <summary class="interactive-summary">
+                                    <h4>📞 Cadência de Primeiro Contacto e Conexão Consultiva (SDR/BDR)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail personalizado, Telefone, LinkedIn (com partilha de insights). | Resp: SDR/BDR.</p>
+                                    <p>Cadências outbound com foco em agregar valor desde o primeiro contato, não apenas vender. Compartilhar insights relevantes para a dor do cliente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🔎 Qualificação Profunda, Mapeamento de Decisores e Construção de Valor (Dias 21-50)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> Validar o fit do lead, entender processos, desafios e metas, mapear influenciadores e construir um forte caso de valor.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound90" data-interaction-id="outbound90_s2_i1">
+                                <summary class="interactive-summary">
+                                    <h4>💡 Múltiplas Reuniões de Qualificação/Descoberta (Executivo Contas)</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada, Visitas (contas estratégicas). | Resp: Executivo Contas.</p>
+                                    <p>Série de reuniões para aprofundar o entendimento da organização do cliente, suas necessidades e desafios. Envolver key-players para obter buy-in.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">💡 Apresentação da Solução Estratégica e Proposta de Valor (Dias 51-75)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🎯</span> Apresentar a Auto Arremate® como parceira estratégica, alinhando com objetivos de longo prazo e apresentando proposta formal.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound90" data-interaction-id="outbound90_s3_i1">
+                                <summary class="interactive-summary">
+                                    <h4>🎬 Demonstração Estratégica para Múltiplos Stakeholders</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada, Apresentação Presencial. | Resp: Executivo Contas.</p>
+                                    <p>Demonstrações personalizadas para diferentes áreas da empresa cliente, mostrando o valor da Auto Arremate em cada nível.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="outbound90" data-interaction-id="outbound90_s3_i2">
+                                <summary class="interactive-summary">
+                                    <h4>📈 Envio da Proposta Comercial Detalhada e Alinhada</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Reunião de apresentação. | Resp: Executivo Contas.</p>
+                                    <p>Proposta formal que detalha a solução, os benefícios e o ROI. Apresentação para os decisores, esclarecendo todas as dúvidas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+
+                        <div class="stage-group card-base" data-aos="fade-up">
+                            <h3 class="stage-title-node">🤝 Negociação Final, Alinhamento Jurídico e Fechamento (Dias 71-90)</h3>
+                            <p class="stage-objective"><span class="emoji-original-color">🤝</span> Finalizar detalhes contratuais, superar objeções e formalizar a parceria de longo prazo.</p>
+
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="100" data-journey-id="outbound90" data-interaction-id="outbound90_s4_i1">
+                                <summary class="interactive-summary">
+                                    <h4>⚖️ Reuniões de Negociação Final e Alinhamento de Termos</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: Videochamada, E-mail, Envolvimento Jurídico. | Resp: Executivo Contas, Direção, Jurídico.</p>
+                                    <p>Negociações de última hora e alinhamentos jurídicos/financeiros para garantir que todas as partes estejam de acordo.</p>
+                                </div>
+                            </div>
+                            <div class="flow-connector-vertical"></div>
+                            <div class="flow-node interactive-details" data-aos="fade-up" data-aos-delay="200" data-journey-id="outbound90" data-interaction-id="outbound90_s4_i2">
+                                <summary class="interactive-summary">
+                                    <h4>🎉 Fechamento e Assinatura do Contrato</h4>
+                                    <i class="fas fa-chevron-down interactive-summary-icon"></i>
+                                </summary>
+                                <div class="interactive-content">
+                                    <p class="interaction-subtitle">Canal: E-mail, Assinatura Eletrónica. | Resp: Executivo Contas, Jurídico, Financeiro, CS.</p>
+                                    <p>Assinatura formal do contrato e início do relacionamento de longo prazo com o time de Customer Success.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-connector-stage">▼</div>
+                        <div class="flow-node end-node" data-aos="zoom-in">
+                            🌟 <strong>Fim da Jornada (Pré-Contrato):</strong> Cliente Pronto para Próximos Passos
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-buttons-container">
+                    <button class="btn btn-nav-playbook prev navigate-to-section" data-target-id="inbound90-content-main">❮ JORNADA ANTERIOR</button>
+                    <button class="btn btn-nav-playbook next navigate-to-section" data-target-id="MODULO_6_ACELERACAO_TATICA">AVANÇAR PARA ACELERAÇÃO TÁTICA ❯</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Alternar tema" title="Alternar Tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" defer>
+        // Importar as funções dos arquivos JavaScript globais
+        import { initializeAudio, playSound, localStorageManager } from '../src/assets/js/utils.js';
+        import { initializeThemeManager } from '../src/assets/js/theme-manager.js';
+        import { initializeAccessibilityControls } from '../src/assets/js/accessibility-manager.js';
+        import { showSection, initializeNavigation } from '../src/assets/js/navigation-manager.js';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({ duration: 900, once: true, offset: 80, easing: 'ease-in-out' });
+
+            initializeAudio();
+            initializeThemeManager('themeToggleBtn');
+            initializeAccessibilityControls('increaseFontBtn', 'decreaseFontBtn', 'readPageBtn', 'main-portal-completo'); // O main-portal-completo abrange todas as seções
+
+            // Dados para os cards da Jornada do Cliente (para popular o índice)
+            const journeysDataForPlaybook = [
+                { id: "inbound30-content-main", shortTitle: "🌟 Inbound (0-30 Dias)", objective: "🎯 Conduzir leads qualificados via Inbound Marketing à assinatura do contrato em até 30 dias, demonstrando otimização na venda de repasse, liquidez e rentabilidade." },
+                { id: "outbound30-content-main", shortTitle: "🎯 Outbound (0-30 Dias)", objective: "🏹 Atingir proativamente leads qualificados, demonstrando rapidamente o valor da Auto Arremate® para otimizar a venda do seu stock e fechar o contrato em até 30 dias." },
+                { id: "inbound60-content-main", shortTitle: "🌟 Inbound (0-60 Dias)", objective: "🚀 Conduzir leads Inbound até à assinatura do contrato num ciclo de até 60 dias, nutrindo o interesse e demonstrando valor de forma consistente." },
+                { id: "outbound60-content-main", shortTitle: "🎯 Outbound (0-60 Dias)", objective: "🏹 Abordar e conduzir leads qualificados via Outbound até ao fecho em 60 dias, nutrindo o relacionamento e demonstrando valor de forma proativa." },
+                { id: "inbound90-content-main", shortTitle: "🌟 Inbound (0-90 Dias)", objective: "🚀 Conduzir leads Inbound até à assinatura do contrato num ciclo de até 90 dias, com foco na educação contínua e construção de um relacionamento sólido." },
+                { id: "outbound90-content-main", shortTitle: "🎯 Outbound (0-90 Dias)", objective: "🏹 Abordar e conduzir leads Outbound até ao fecho em 90 dias, com abordagem consultiva e construção de relacionamento de longo prazo." }
+            ];
+
+            const jornadaClienteCardsContainer = document.getElementById('jornadaClienteCardsContainer');
+
+            /**
+             * Renderiza os cards do índice da jornada do cliente.
+             */
+            function renderJornadaClienteCards() {
+                if (!jornadaClienteCardsContainer) return;
+                jornadaClienteCardsContainer.innerHTML = ''; // Limpa o container antes de renderizar
+                journeysDataForPlaybook.forEach(journey => {
+                    const cardDiv = document.createElement('div');
+                    cardDiv.className = 'jornada-card-playbook card-base'; // Adiciona card-base
+                    cardDiv.setAttribute('data-aos', 'fade-up');
+                    cardDiv.setAttribute('data-target-id', journey.id); // Usar data-target-id
+
+                    cardDiv.innerHTML = `
+                        <h3 class="text-lg font-semibold mb-2">${journey.shortTitle}</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">${journey.objective}</p>
+                        <span class="details-prompt-playbook">Ver Detalhes da Jornada <i class="fas fa-arrow-right ml-1"></i></span>
+                    `;
+                    // Adiciona evento de clique para a div, chamando showSection
+                    cardDiv.addEventListener('click', (e) => {
+                        playSound('click'); // Feedback sonoro ao clicar no card
+                        const targetId = e.currentTarget.getAttribute('data-target-id');
+                        showSection(targetId);
+                    });
+                    jornadaClienteCardsContainer.appendChild(cardDiv);
+                });
+            }
+
+            // --- Lógica para os detalhes das interações (Details/Summary) ---
+            document.querySelectorAll('.interactive-details').forEach(details => {
+                const summary = details.querySelector('summary.interactive-summary');
+                const content = details.querySelector('.interactive-content');
+
+                if (summary && content) {
+                    summary.addEventListener('click', (e) => {
+                        if (details.open) { // Se está prestes a fechar
+                            content.style.maxHeight = content.scrollHeight + 'px'; // Pega altura real antes de fechar
+                            setTimeout(() => {
+                                content.style.maxHeight = '0';
+                                content.style.opacity = '0';
+                            }, 10);
+                            playSound('vibration-soft'); // Feedback sonoro ao fechar
+                        } else { // Se está prestes a abrir
+                            content.style.maxHeight = content.scrollHeight + 'px'; // Define altura real
+                            content.style.opacity = '1';
+                            playSound('vibration-soft'); // Feedback sonoro ao abrir
+                        }
+                    });
+
+                    // Para resetar max-height após a transição de abertura e permitir ajuste dinâmico
+                    content.addEventListener('transitionend', () => {
+                        if (details.open) {
+                            content.style.maxHeight = 'none';
+                        }
+                    });
+                }
+            });
+
+            // Inicializa a navegação
+            initializeNavigation();
+
+            // Renderiza os cards da jornada ao carregar a seção principal da jornada
+            // Isso garante que, ao voltar para essa seção, os cards sejam renderizados novamente
+            document.addEventListener('sectionShown', (event) => {
+                if (event.detail.sectionId === 'jornada-cliente-aa-content-section') {
+                    renderJornadaClienteCards();
+                }
+            });
+            // Adiciona um listener direto ao botão "VOLTAR AO GUIA ESTRATÉGICO" na jornada detalhada
+            document.querySelectorAll('.back-to-manual-pitstop-detalhes').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    showSection('manual-pitstop-detalhes-section');
+                });
+            });
+
+            // Força a renderização inicial dos cards caso a página seja a primeira a ser carregada
+            if (window.location.hash.includes('jornada-cliente-aa-content-section') || !window.location.hash) {
+                renderJornadaClienteCards();
+            }
+        });
+    </script>
+</body>
+</html>
