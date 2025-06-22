@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Auto Arremate® / Arremaq 3.0 - Trilha Completa de Aprendizado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-teal-50 to-orange-50 font-sans">
+    <div id="app">
+        <!-- Cover Page -->
+        <section id="cover" class="min-h-screen flex flex-col justify-center items-center text-center p-8">
+            <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+                <span class="block mb-2">🏎️ TRILHA DE APRENDIZADO 💨</span>
+                <span class="block mb-2">⚡ SEU GUIA RELÂMPAGO 💡</span>
+                <span class="block mb-2">🎯 PARA UMA PERFORMANCE CAMPEÃ 🏁</span>
+                <span class="block">🏆 NA <span class="text-teal-600">AUTO ARREMATE</span> E <span class="text-orange-500">ARREMAQ</span> 🏅</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-semibold mb-8 max-w-4xl text-teal-700">
+                🚀 SÓ OS FORTES ACELERAM, MAS APENAS OS SÁBIOS DOMINAM A ARTE DE FREAR! 🛑
+            </p>
+            <p class="text-lg mb-8 text-gray-600">
+                ✨ Criado pelo 👨‍💻 Analista de Operações - <strong class="text-orange-600">Marcelo do Nascimento</strong> 🚀
+            </p>
+            <button onclick="showRegistration()" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-xl text-xl transition-all transform hover:-translate-y-1">
+                EMBARCAR NESSA CORRIDA ÉPICA!
+                <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </section>
+
+        <!-- Registration Modal -->
+        <div id="registrationModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4">
+                <h2 class="text-2xl font-bold text-center mb-4">🏁 Bem-vindo à Trilha!</h2>
+                <form id="registrationForm">
+                    <div class="mb-4">
+                        <label class="block text-sm font-semibold mb-2">
+                            <i class="fas fa-user"></i> Nome Completo *
+                        </label>
+                        <input type="text" name="fullName" required class="w-full p-3 border rounded-lg">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-semibold mb-2">
+                            <i class="fas fa-envelope"></i> E-mail *
+                        </label>
+                        <input type="email" name="email" required class="w-full p-3 border rounded-lg">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-semibold mb-2">
+                            <i class="fas fa-briefcase"></i> Cargo *
+                        </label>
+                        <input type="text" name="position" required class="w-full p-3 border rounded-lg">
+                    </div>
+                    <button type="submit" class="w-full bg-teal-600 text-white font-bold py-3 rounded-lg hover:bg-teal-700">
+                        🚀 INICIAR TRILHA
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Main Portal -->
+        <section id="portal" class="hidden min-h-screen py-16">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4 text-gray-800">🚦 CENTRAL DE COMANDO</h2>
+                    <div class="bg-white rounded-lg p-4 shadow-md">
+                        <div class="w-full bg-gray-200 rounded-full h-4 mb-2">
+                            <div id="progressBar" class="bg-gradient-to-r from-teal-500 to-orange-500 h-4 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p id="progressText">0% Concluído - 0 de 16 módulos</p>
+                    </div>
+                </div>
+                <div id="modulesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Modules will be generated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Module Modal -->
+        <div id="moduleModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-90vh overflow-y-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 id="moduleTitle" class="text-2xl font-bold"></h2>
+                    <button onclick="closeModal()" class="text-2xl hover:text-red-500">✕</button>
+                </div>
+                <div id="moduleContent" class="mb-6"></div>
+                <div class="text-center">
+                    <button onclick="startQuiz()" class="bg-teal-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-700">
+                        FAZER QUIZ
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Modal -->
+        <div id="quizModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4">
+                <h2 class="text-2xl font-bold mb-6">🧠 Quiz</h2>
+                <div id="quizContent"></div>
+            </div>
+        </div>
+
+        <!-- Certificate Modal -->
+        <div id="certificateModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4">
+                <div class="text-center border-4 border-teal-500 rounded-2xl p-8 bg-gradient-to-br from-teal-50 to-orange-50">
+                    <h2 class="text-3xl font-bold mb-4 text-teal-700">🏆 CERTIFICADO DE CONCLUSÃO 🏆</h2>
+                    <p class="text-xl mb-6 text-gray-700">TRILHA DE APRENDIZADO AUTO ARREMATE & ARREMAQ</p>
+                    <h3 id="certName" class="text-4xl font-bold mb-4 uppercase text-orange-600"></h3>
+                    <p class="mb-6">concluiu com sucesso a trilha completa de aprendizado!</p>
+                    <div class="flex gap-4 justify-center">
+                        <button onclick="window.print()" class="bg-teal-600 text-white px-6 py-3 rounded-lg">
+                            <i class="fas fa-download"></i> BAIXAR
+                        </button>
+                        <button onclick="closeCertificate()" class="bg-orange-500 text-white px-6 py-3 rounded-lg">
+                            FECHAR
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentUser = null;
+        let moduleProgress = {};
+        let currentModule = null;
+        let currentQuiz = null;
+
+        const modules = [
+            { id: 1, title: "🚀 NOSSA PISTA DE DECOLAGEM", description: "História e valores", content: "Conheça nossa história e valores fundamentais." },
+            { id: 2, title: "🚗 AUTO ARREMATE POLE POSITION", description: "Veículos leves", content: "Domine o universo dos veículos leves." },
+            { id: 3, title: "🚜 ARREMAQ FORÇA BRUTA", description: "Máquinas pesadas", content: "Gigantes do agro e construção." }
+        ];
+
+        // Add more modules
+        for (let i = 4; i <= 16; i++) {
+            modules.push({
+                id: i,
+                title: `📚 MÓDULO ${i}`,
+                description: `Conteúdo avançado ${i}`,
+                content: `Conteúdo especializado do módulo ${i}.`
+            });
+        }
+
+        function showRegistration() {
+            document.getElementById("registrationModal").classList.remove("hidden");
+        }
+
+        function hideRegistration() {
+            document.getElementById("registrationModal").classList.add("hidden");
+        }
+
+        function showPortal() {
+            document.getElementById("cover").classList.add("hidden");
+            document.getElementById("portal").classList.remove("hidden");
+            generateModules();
+            updateProgress();
+        }
+
+        function generateModules() {
+            const grid = document.getElementById("modulesGrid");
+            grid.innerHTML = "";
+
+            modules.forEach((module, index) => {
+                const progress = moduleProgress[module.id] || { completed: false };
+                const isLocked = index > 0 && !moduleProgress[modules[index - 1].id]?.completed;
+                const isCurrent = !progress.completed && !isLocked;
+
+                const card = document.createElement("div");
+                card.className = `bg-white rounded-xl p-6 shadow-lg transition-all hover:shadow-xl ${
+                    progress.completed ? "border-2 border-teal-500 bg-teal-50" :
+                    isCurrent ? "border-2 border-orange-500 bg-orange-50" :
+                    "opacity-60"
+                }`;
+
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-bold">${module.title}</h3>
+                        <span class="text-2xl">
+                            ${progress.completed ? "✅" : isCurrent ? "▶️" : "🔒"}
+                        </span>
+                    </div>
+                    <p class="text-gray-600 mb-4">${module.description}</p>
+                    <button 
+                        onclick="openModule(${module.id})" 
+                        class="w-full py-2 px-4 rounded-lg font-semibold ${
+                            isLocked ? "bg-gray-300 cursor-not-allowed" :
+                            "bg-teal-600 text-white hover:bg-teal-700"
+                        }"
+                        ${isLocked ? "disabled" : ""}
+                    >
+                        ${progress.completed ? "REVISAR" : isLocked ? "BLOQUEADO" : "INICIAR"}
+                    </button>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        function openModule(moduleId) {
+            currentModule = modules.find(m => m.id === moduleId);
+            document.getElementById("moduleTitle").textContent = currentModule.title;
+            document.getElementById("moduleContent").innerHTML = `<p class="text-lg">${currentModule.content}</p>`;
+            document.getElementById("moduleModal").classList.remove("hidden");
+        }
+
+        function closeModal() {
+            document.getElementById("moduleModal").classList.add("hidden");
+            document.getElementById("quizModal").classList.add("hidden");
+        }
+
+        function startQuiz() {
+            document.getElementById("moduleModal").classList.add("hidden");
+            document.getElementById("quizModal").classList.remove("hidden");
+            
+            const quizContent = document.getElementById("quizContent");
+            quizContent.innerHTML = `
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Pergunta sobre ${currentModule.title}</h3>
+                    <div class="space-y-3">
+                        <button onclick="answerQuiz(true)" class="w-full p-3 text-left border rounded-lg hover:bg-teal-50">
+                            Resposta correta sobre o módulo
+                        </button>
+                        <button onclick="answerQuiz(false)" class="w-full p-3 text-left border rounded-lg hover:bg-red-50">
+                            Resposta incorreta
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function answerQuiz(correct) {
+            if (correct) {
+                moduleProgress[currentModule.id] = { completed: true, score: 100 };
+                saveProgress();
+                
+                const completedCount = Object.values(moduleProgress).filter(p => p.completed).length;
+                if (completedCount === modules.length) {
+                    showCertificate();
+                } else {
+                    alert("🎉 Módulo concluído com sucesso!");
+                    closeModal();
+                    generateModules();
+                    updateProgress();
+                }
+            } else {
+                alert("😔 Resposta incorreta. Tente novamente!");
+            }
+        }
+
+        function showCertificate() {
+            closeModal();
+            document.getElementById("certName").textContent = currentUser.fullName;
+            document.getElementById("certificateModal").classList.remove("hidden");
+        }
+
+        function closeCertificate() {
+            document.getElementById("certificateModal").classList.add("hidden");
+        }
+
+        function updateProgress() {
+            const completed = Object.values(moduleProgress).filter(p => p.completed).length;
+            const percentage = Math.round((completed / modules.length) * 100);
+            
+            document.getElementById("progressBar").style.width = percentage + "%";
+            document.getElementById("progressText").textContent = `${percentage}% Concluído - ${completed} de ${modules.length} módulos`;
+        }
+
+        function saveProgress() {
+            localStorage.setItem("autoArremateProgress", JSON.stringify(moduleProgress));
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem("autoArremateProgress");
+            if (saved) {
+                moduleProgress = JSON.parse(saved);
+            }
+        }
+
+        // Event Listeners
+        document.getElementById("registrationForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            currentUser = {
+                fullName: formData.get("fullName"),
+                email: formData.get("email"),
+                position: formData.get("position")
+            };
+            
+            localStorage.setItem("autoArremateUser", JSON.stringify(currentUser));
+            hideRegistration();
+            showPortal();
+        });
+
+        // Initialize
+        document.addEventListener("DOMContentLoaded", function() {
+            const userData = localStorage.getItem("autoArremateUser");
+            if (userData) {
+                currentUser = JSON.parse(userData);
+                loadProgress();
+                showPortal();
+            }
+        });
+    </script>
+</body>
+</html>
