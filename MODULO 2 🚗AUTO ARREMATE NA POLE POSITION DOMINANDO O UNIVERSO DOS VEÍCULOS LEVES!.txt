@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Arremate na Pole Position</title>
+    <link rel="stylesheet" href="../src/assets/css/design-tokens.css">
+    <link rel="stylesheet" href="../src/assets/css/base.css">
+    <link rel="stylesheet" href="../src/assets/css/components.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    </head>
+<body>
+
+    <div class="accessibility-controls">
+        <button id="increaseFontBtn" class="accessibility-btn" aria-label="Aumentar tamanho da fonte" title="Aumentar Fonte">
+            <i class="fas fa-search-plus"></i>
+        </button>
+        <button id="decreaseFontBtn" class="accessibility-btn" aria-label="Diminuir tamanho da fonte" title="Diminuir Fonte">
+            <i class="fas fa-search-minus"></i>
+        </button>
+        <button id="readPageBtn" class="accessibility-btn" aria-label="Ler página em voz alta" title="Ler Página">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <main id="main-portal-completo">
+
+        <section id="playbook-sec-1-content-main" class="playbook-sub-section" data-aos="fade-up">
+            <div class="container mx-auto">
+                 <button class="btn btn-outline back-to-manual-pitstop-detalhes mb-8 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR AO GUIA ESTRATÉGICO
+                </button>
+                <h2 class="playbook-content-title text-center">
+                    <span class="emoji-original-color">🚗</span><strong class="title-autoarremate">AUTO ARREMATE NA POLE POSITION: DOMINANDO O UNIVERSO DOS VEÍCULOS LEVES!</strong>
+                </h2>
+                <div class="text-content-container playbook-text space-y-10 mt-8">
+                    <section id="intro-auto-arremate" data-aos="fade-up">
+                        <h3 class="playbook-section-title !text-center uppercase">
+                            <span class="emoji">🌟</span> <strong>A GARAGEM DOS CAMPEÕES: PERFORMANCE E INOVAÇÃO PARA VEÍCULOS LEVES!</strong>
+                        </h3>
+                        <p><span class="sentence-emoji">🏁</span>Prepare-se para entrar na pista de alta velocidade da Auto Arremate, onde cada veículo leve encontra seu destino de forma ágil, inteligente e lucrativa! <span class="sentence-emoji">🛠️</span>Nossa plataforma é o seu box de ferramentas completo, projetado para concessionárias, locadoras e todos os ases do volante que buscam dominar o universo da comercialização de carros, SUVs, e utilitários.</p>
+                        <p><span class="sentence-emoji">🏆</span>Desde a avaliação precisa com o nosso <strong>RaioX</strong>, que enxerga cada detalhe do veículo como um mecânico experiente, até a publicação em nosso <strong>Marketplace B2B</strong>, a maior vitrine de oportunidades do Brasil, a Auto Arremate é a sua garantia de pole position. <span class="emoji">📊</span>Com nossos <strong>Dashboards</strong>, você tem o painel de controle para decisões na velocidade da luz, transformando dados em ultrapassagens estratégicas!</p>
+                    </section>
+
+                    <hr class="my-10 border-t-2 border-gray-200 dark:border-gray-700">
+
+                    <section id="pilares-pdgc" data-aos="fade-up">
+                        <h3 class="playbook-section-title !text-center uppercase">
+                            <span class="emoji">✨</span> <strong>NOSSOS PILARES MÁGICOS (PDGC): A FÓRMULA SECRETA DA VITÓRIA!</strong>
+                        </h3>
+                        <p><span class="sentence-emoji">🔑</span>Apresentamos o conceito <strong>PDGC</strong>, a nossa fórmula secreta para turbinar seus resultados no mercado de veículos leves! <span class="sentence-emoji">💡</span>Cada letra é um componente crucial do nosso motor de sucesso, e juntas, elas formam a engrenagem perfeita que impulsiona nossos clientes à vitória:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+                            <div class="card-base" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="card-base-icon">🅿️</div>
+                                <h4 class="card-base-title">PRECIFICAÇÃO INTELIGENTE</h4>
+                                <p class="card-base-description">Use nossos dados de mercado para calibrar seus preços como um campeão, maximizando sua margem em cada negociação!</p>
+                            </div>
+                            <div class="card-base" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="card-base-icon">📢</div>
+                                <h4 class="card-base-title">DIVULGAÇÃO TURBINADA</h4>
+                                <p class="card-base-description">Seu veículo na vitrine certa! Alcance nacional em nosso Marketplace B2B e outros canais para vender mais rápido.</p>
+                            </div>
+                            <div class="card-base" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="card-base-icon">🛠️</div>
+                                <h4 class="card-base-title">GESTÃO EFICIENTE</h4>
+                                <p class="card-base-description">Controle total do seu estoque, vistorias digitais com RaioX e dashboards para decisões ágeis. Seu pit stop de comando!</p>
+                            </div>
+                            <div class="card-base" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="card-base-icon">💰</div>
+                                <h4 class="card-base-title">COMERCIALIZAÇÃO VENCEDORA</h4>
+                                <p class="card-base-description">Ferramentas e estratégias para fechar negócios mais rápido, com mais lucro e menos dor de cabeça. A bandeirada final!</p>
+                            </div>
+                        </div>
+                        <p class="mt-6"><span class="sentence-emoji">🏁</span>O PDGC é a essência do que a Auto Arremate entrega: uma solução <strong>completa e integrada</strong> que atua em todas as frentes para garantir que você cruze a linha de chegada sempre na frente!</p>
+                    </section>
+
+                    <hr class="my-10 border-t-2 border-gray-200 dark:border-gray-700">
+
+                    <section id="superpoderes-plataforma" data-aos="fade-up">
+                        <h3 class="playbook-section-title !text-center uppercase"><span class="emoji">🦸</span> OS SUPERPODERES DA NOSSA PLATAFORMA: SUA GARAGEM TECNOLÓGICA!</h3>
+                        <p class="text-center mb-8"><span class="sentence-emoji">🚀</span>Descubra as ferramentas que nos tornam imbatíveis e impulsionam o sucesso estrondoso dos nossos clientes na Auto Arremate. É aqui que a mágica da velocidade e da eficiência acontece!</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="card-base" data-aos="fade-up">
+                                <div class="card-base-icon">🔗</div>
+                                <h4 class="card-base-title">TUDO CONECTADO: A PLATAFORMA INTEGRADA!</h4>
+                                <p class="card-base-description">Imagine um ecossistema digital onde todas as ferramentas que você precisa estão interligadas, funcionando em perfeita harmonia para uma visão 360º do seu negócio.</p>
+                            </div>
+                            <div class="card-base" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card-base-icon">🔎</div>
+                                <h4 class="card-base-title">RAIOX: A VISÃO DE RAIO-X DIGITAL!</h4>
+                                <p class="card-base-description">Nossa ferramenta de inspeção digital permite um levantamento completo do estado do veículo, da lataria aos detalhes internos, garantindo a confiança para fechar negócios.</p>
+                            </div>
+                            <div class="card-base" data-aos="fade-up" data-aos-delay="200">
+                                <div class="card-base-icon">➕</div>
+                                <h4 class="card-base-title">RAIOX+: O HISTÓRICO COMPLETO!</h4>
+                                <p class="card-base-description">Mergulhe fundo no passado do veículo, trazendo à tona informações cruciais como histórico de roubo, débitos, multas e sinistros para proteger seus negócios.</p>
+                            </div>
+                            <div class="card-base" data-aos="fade-up">
+                                <div class="card-base-icon">📊</div>
+                                <h4 class="card-base-title">DASHBOARDS: DECISÕES NA VELOCIDADE DA LUZ!</h4>
+                                <p class="card-base-description">Acompanhe em tempo real os indicadores chave do seu negócio: giro de estoque, performance de vendas, precificação e muito mais, para decisões rápidas e inteligentes.</p>
+                            </div>
+                            <div class="card-base" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card-base-icon">🤝</div>
+                                <h4 class="card-base-title">MARKETPLACE B2B: O GRANDE PONTO DE ENCONTRO!</h4>
+                                <p class="card-base-description">Conecte-se ao maior universo de oportunidades B2B do Brasil. Publique seus veículos para uma audiência qualificada ou encontre o estoque que você precisa.</p>
+                            </div>
+                            <div class="card-base" data-aos="fade-up" data-aos-delay="200">
+                                <div class="card-base-icon">⚡</div>
+                                <h4 class="card-base-title">COTAÇÃO RÁPIDA: AGILIDADE PURA!</h4>
+                                <p class="card-base-description">Precisa avaliar um veículo para compra ou trade-in? Obtenha uma estimativa precisa e baseada em dados de mercado em questão de segundos. Agilidade para suas negociações!</p>
+                            </div>
+                             <div class="card-base" data-aos="fade-up">
+                                <div class="card-base-icon">🏷️</div>
+                                <h4 class="card-base-title">WHITE LABEL: SUA MARCA, NOSSA POTÊNCIA!</h4>
+                                <p class="card-base-description">Fortaleça sua marca com um portal de vendas online com sua identidade visual, mas com toda a tecnologia e robustez da plataforma Auto Arremate por trás.</p>
+                            </div>
+                            <div class="card-base" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card-base-icon">🔌</div>
+                                <h4 class="card-base-title">INTEGRAÇÕES: CONECTANDO SEU UNIVERSO!</h4>
+                                <p class="card-base-description">Nossa plataforma fala a língua do seu negócio! Integramos facilmente com os principais CRMs e ERPs do mercado, garantindo um fluxo de dados automático e sem gargalos.</p>
+                            </div>
+                             <div class="card-base" data-aos="fade-up" data-aos-delay="200">
+                                <div class="card-base-icon">🔑</div>
+                                <h4 class="card-base-title">JORNADA PÓS-VENDA: FECHANDO COM CHAVE DE OURO!</h4>
+                                <p class="card-base-description">A venda não termina na assinatura! Oferecemos ferramentas para gerenciar a jornada pós-venda, garantindo a satisfação e fidelização do seu cliente.</p>
+                            </div>
+                            <div class="card-base" data-aos="fade-up">
+                                <div class="card-base-icon">🔒</div>
+                                <h4 class="card-base-title">PERMISSÕES DE ACESSO: CONTROLE TOTAL!</h4>
+                                <p class="card-base-description">Segurança e controle são fundamentais. Defina quem pode ver e fazer o quê dentro da plataforma, garantindo que cada membro da equipe tenha o acesso certo.</p>
+                            </div>
+                           <div class="card-base" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card-base-icon">📦</div>
+                                <h4 class="card-base-title">MODELO DE OFERTAS EM LOTE: COMPRE MAIS, MAIS FÁCIL!</h4>
+                                <p class="card-base-description">Para quem busca volume com inteligência. Permite que compradores adquiram múltiplos veículos de uma só vez, com condições especiais e um processo simplificado.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="highlight-box-base" data-aos="fade-up">
+                        <p>
+                            <strong class="highlight-title"><span class="emoji-original-color">📢</span> EQUIPE AUTO ARREMATE, PREPARAR PARA ACELERAR!</strong>
+                            <span class="sentence-emoji">⭐</span> Vocês não vendem apenas uma plataforma, vocês entregam o <strong>mapa da mina para a transformação digital</strong> no mercado automotivo!
+                            <span class="sentence-emoji">💪</span> Acreditem no poder da nossa solução, dominem cada ferramenta, e mostrem aos nossos clientes como a Auto Arremate® é a <strong>chave para o pódio deles!</strong> <span class="sentence-emoji">🚀</span>Katchau! Vamos com tudo!
+                        </p>
+                    </div>
+                </div>
+                <div class="nav-buttons-container">
+                    <button class="btn btn-nav-playbook prev navigate-to-section" data-target-id="manual-pitstop-detalhes-section">❮ VOLTAR AOS MÓDULOS</button>
+                    <button class="btn btn-nav-playbook next navigate-to-section" data-target-id="playbook-sec-arremaq-content-main">AVANÇAR PARA ARREMAQ ❯</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Alternar tema" title="Alternar Tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" defer>
+        // Importar as funções dos arquivos JavaScript globais
+        import { initializeAudio, playSound, localStorageManager } from '../src/assets/js/utils.js';
+        import { initializeThemeManager } from '../src/assets/js/theme-manager.js';
+        import { initializeAccessibilityControls } from '../src/assets/js/accessibility-manager.js';
+        import { showSection, initializeNavigation } from '../src/assets/js/navigation-manager.js';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({ duration: 900, once: true, offset: 80, easing: 'ease-in-out' });
+
+            initializeAudio();
+            initializeThemeManager('themeToggleBtn');
+            // Assumimos que o ID do container de conteúdo para leitura é 'main-portal-completo' ou similar
+            initializeAccessibilityControls('increaseFontBtn', 'decreaseFontBtn', 'readPageBtn', 'playbook-sec-1-content-main');
+
+            // Listeners de navegação específicos deste módulo
+            // Os botões já estão configurados com data-target-id, então basta chamar initializeNavigation()
+            initializeNavigation();
+
+            // Adicione aqui qualquer lógica específica que este módulo necessite
+            // Por exemplo, se MODULO_2_POLE_POSITION tinha alguma lógica que não seja navegação ou acessibilidade
+        });
+    </script>
+</body>
+</html>

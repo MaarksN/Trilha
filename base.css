@@ -1,0 +1,252 @@
+/* =============================================
+ * base.css
+ * Global Styles & Base Elements
+ * ============================================= */
+
+/* Importa as variáveis de design tokens */
+@import 'design-tokens.css';
+
+/* Resets e Estilos Base para HTML e Body */
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%; /* Garante que o texto não seja redimensionado automaticamente */
+    scroll-behavior: smooth; /* Rolagem suave para âncoras */
+    font-size: 100%; /* Tamanho de fonte base ajustável para acessibilidade */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Herda o box-sizing para todos os elementos */
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    background-color: var(--bg-main-light);
+    color: var(--text-body-light);
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+    -webkit-font-smoothing: antialiased; /* Suavização de fontes para WebKit */
+    -moz-osx-font-smoothing: grayscale; /* Suavização de fontes para Firefox (macOS) */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+    transition: background-color var(--transition-medium), color var(--transition-medium); /* Transição suave de tema */
+}
+
+/* Estilos para o tema escuro */
+html[data-theme='dark'] {
+    color-scheme: dark; /* Indica ao navegador que o tema é escuro */
+}
+
+html[data-theme='dark'] body {
+    background-color: var(--bg-main-dark);
+    color: var(--text-body-dark);
+}
+
+/* Estilos para Títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    color: var(--text-headings-light);
+    line-height: 1.2;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700; /* Padrão para títulos */
+    transition: color var(--transition-medium); /* Transição de cor no tema */
+}
+
+html[data-theme='dark'] h1,
+html[data-theme='dark'] h2,
+html[data-theme='dark'] h3,
+html[data-theme='dark'] h4,
+html[data-theme='dark'] h5,
+html[data-theme='dark'] h6 {
+    color: var(--text-headings-dark);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.75rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.25rem; }
+
+/* Parágrafos */
+p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* Links */
+a {
+    color: var(--aa-green); /* Cor padrão para links */
+    text-decoration: none;
+    transition: color var(--transition-fast), text-decoration var(--transition-fast);
+}
+
+html[data-theme='dark'] a {
+    color: var(--aa-green-text-dark-theme);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--aa-green-darker);
+}
+
+html[data-theme='dark'] a:hover {
+    color: var(--arremaq-orange-text-dark-theme); /* Links hover no tema escuro */
+}
+
+/* Imagens responsivas por padrão */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Listas */
+ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Linhas horizontais (separadores) */
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color-light);
+    margin: 2rem 0;
+    transition: border-color var(--transition-medium);
+}
+
+html[data-theme='dark'] hr {
+    border-top-color: var(--border-color-dark);
+}
+
+/* Classes utilitárias */
+
+/* Visibilidade */
+.hidden {
+    display: none !important;
+}
+
+.sr-only { /* Apenas para leitores de tela */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Centralização de conteúdo */
+.container {
+    max-width: 1200px; /* Largura máxima comum para o conteúdo */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}
+
+/* Emoji Styling - para garantir que emojis tenham a cor original */
+.emoji-original-color {
+    -webkit-text-fill-color: initial;
+    text-fill-color: initial;
+    background: none;
+    display: inline-block;
+    text-shadow: none;
+}
+
+/* Cores de marca específicas para texto, garantindo !important para sobreposição */
+.text-aa-green-darker {
+    color: var(--aa-green-darker) !important;
+    -webkit-text-fill-color: var(--aa-green-darker) !important;
+    text-fill-color: var(--aa-green-darker) !important;
+    background: none !important;
+}
+html[data-theme='dark'] .text-aa-green-darker {
+    color: var(--aa-green-text-dark-theme) !important;
+    -webkit-text-fill-color: var(--aa-green-text-dark-theme) !important;
+    text-fill-color: var(--aa-green-text-dark-theme) !important;
+}
+
+.text-arremaq-orange-darker {
+    color: var(--arremaq-orange-darker) !important;
+    -webkit-text-fill-color: var(--arremaq-orange-darker) !important;
+    text-fill-color: var(--arremaq-orange-darker) !important;
+    background: none !important;
+}
+html[data-theme='dark'] .text-arremaq-orange-darker {
+    color: var(--arremaq-orange-text-dark-theme) !important;
+    -webkit-text-fill-color: var(--arremaq-orange-text-dark-theme) !important;
+    text-fill-color: var(--arremaq-orange-text-dark-theme) !important;
+}
+
+.sentence-emoji {
+    margin-right: 0.3em;
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+/* Estilo de foco para acessibilidade (Outline visível) */
+*:focus-visible {
+    outline: 3px solid var(--arremaq-orange-lighter); /* Foco vibrante */
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* Estilo para elementos desabilitados */
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: grayscale(80%); /* Efeito de desbotamento visual */
+}
+
+/* Responsividade básica para tamanhos de fonte em telas menores */
+@media (max-width: 1024px) {
+    html {
+        font-size: 90%; /* Reduz a fonte base em telas médias */
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    h4 { font-size: 1.5rem; }
+    h5 { font-size: 1.25rem; }
+    h6 { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 85%; /* Reduz ainda mais em tablets */
+    }
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.3rem; }
+    h5 { font-size: 1.1rem; }
+    h6 { font-size: 1rem; }
+    p { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 80%; /* Ajuste para telas muito pequenas (celulares) */
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.1rem; }
+    h5 { font-size: 1rem; }
+    h6 { font-size: 0.9rem; }
+    p { font-size: 0.9rem; }
+    .container {
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+    }
+}

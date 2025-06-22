@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio dos Campeões Auto Arremate</title>
+    <link rel="stylesheet" href="../src/assets/css/design-tokens.css">
+    <link rel="stylesheet" href="../src/assets/css/base.css">
+    <link rel="stylesheet" href="../src/assets/css/components.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    </head>
+<body>
+
+    <div class="accessibility-controls">
+        <button id="increaseFontBtn" class="accessibility-btn" aria-label="Aumentar tamanho da fonte" title="Aumentar Fonte">
+            <i class="fas fa-search-plus"></i>
+        </button>
+        <button id="decreaseFontBtn" class="accessibility-btn" aria-label="Diminuir tamanho da fonte" title="Diminuir Fonte">
+            <i class="fas fa-search-minus"></i>
+        </button>
+        <button id="readPageBtn" class="accessibility-btn" aria-label="Ler página em voz alta" title="Ler Página">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <main id="main-portal-completo">
+        <section id="playbook-sec-11-content-main" class="playbook-sub-section" data-aos="fade-up">
+            <div class="container mx-auto">
+                <button class="btn btn-outline back-to-manual-pitstop-detalhes mb-8 text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i> VOLTAR AO GUIA ESTRATÉGICO
+                </button>
+                <h2 class="playbook-content-title text-center"><span class="emoji-original-color">🏆</span><strong>DESAFIO DOS CAMPEÕES <span class="text-aa-green-darker">AUTO ARREMATE</span> & <span class="text-arremaq-orange-darker">ARREMAQ</span>: TESTE SEU CONHECIMENTO ESTRATÉGICO!</strong></h2>
+                <div id="quiz-app-root">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Alternar tema" title="Alternar Tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="module">
+        // Importar as funções dos arquivos JavaScript globais
+        import { initializeAudio, playSound, localStorageManager } from '../src/assets/js/utils.js';
+        import { initializeThemeManager } from '../src/assets/js/theme-manager.js';
+        import { initializeAccessibilityControls } from '../src/assets/js/accessibility-manager.js';
+        import { showSection, initializeNavigation } from '../src/assets/js/navigation-manager.js';
+
+        // O conteúdo do seu aplicativo React (o código do QuizScreen, PlayerSetup, etc.)
+        // precisará ser transpilado de JSX para JS puro ou importado como um módulo JS válido.
+        // Por simplicidade aqui, vou assumir que o código React (JSX)
+        // será colado diretamente APÓS esta tag <script type="module">,
+        // ou que o arquivo MODULO_11_DESAFIO_CAMPEOES.js será criado
+        // e importado aqui, contendo o código JSX transpilado.
+
+        // Por enquanto, vamos manter uma estrutura que "espera" pelo código React.
+        // O ideal é que o seu `MODULO 11 - 🏆DESAFIO DOS CAMPEÕES AUTO ARREMATE TESTE SEU CONHECIMENTO ESTRATÉGICO!.html`
+        // seja um arquivo .jsx e você o transpile para um .js antes de usar.
+        // Ou, para fins de demonstração direta aqui, podemos encapsular o código React
+        // como se ele estivesse dentro deste script, usando Babel para transpilação no navegador (NÃO RECOMENDADO EM PRODUÇÃO).
+
+        // Para esta refatoração, a instrução é que o conteúdo do React App, que está em JSX,
+        // seja processado para JS puro e então inserido ou importado aqui.
+        // Para que o navegador consiga executar, vou simular que o JSX foi convertido.
+
+        // =====================================================================
+        // ÍCONES SVG (JSX) - Adaptados para JS puro para serem usados abaixo
+        // =====================================================================
+        const TrophyIcon = () => React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "48", height: "48", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", className: "lucide lucide-trophy text-yellow-400 inline-block drop-shadow-lg" }, React.createElement("path", { d: "M6 9H4.5a2.5 2.5 0 0 1 0-5H6" }), React.createElement("path", { d: "M18 9h1.5a2.5 2.5 0 0 0 0-5H18" }), React.createElement("path", { d: "M4 22h16" }), React.createElement("path", { d: "M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" }), React.createElement("path", { d: "M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" }), React.createElement("path", { d: "M18 2H6v7a6 6 0 0 0 12 0V2Z" }));
+        const ArrowRightIcon = () => React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", className: "lucide lucide-arrow-right ml-2" }, React.createElement("path", { d: "M5 12h14" }), React.createElement("path", { d: "m12 5 7 7-7 7" }));
+        const ClockIcon = () => React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", className: "lucide lucide-clock" }, React.createElement("circle", { cx: "12", cy: "12", r: "10" }), React.createElement("polyline", { points: "12 6 12 12 16 14" }));
+        const CheckCircleIcon = () => React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "28", height: "28", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", className: "lucide lucide-check-circle text-green-500 stroke-current drop-shadow-md" }, React.createElement("path", { d: "M22 11.08V12a10 10 0 1 1-5.93-9.14" }), React.createElement("polyline", { points: "22 4 12 14.01 9 11.01" }));
+        const XCircleIcon = () => React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "28", height: "28", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", className: "lucide lucide-x-circle text-red-500 stroke-current drop-shadow-md" }, React.createElement("circle", { cx: "12", cy: "12", r: "10" }), React.createElement("line", { x1: "15", y1: "9", x2: "9", y2: "15" }), React.createElement("line", { x1: "9", y1: "9", x2: "15", y2: "15" }));
+        const StarIcon = ({ className = "text-yellow-400" }) => React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "20", height: "20", viewBox: "0 0 24 24", fill: "currentColor", stroke: "none", className: `lucide lucude-star ${className}` }, React.createElement("polygon", { points: "12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" }));
+
+        // =====================================================================
+        // BANCO DE PERGUNTAS (Mantido como um array JS)
+        // =====================================================================
+        const ALL_QUESTIONS = [
+            // Nível 1: Fundamentos (5 perguntas)
+            { stage: 1, question: "🚗 O que é 'repasse de veículos' no nosso contexto de negócio?", options: ["👤 Venda para consumidor final", "🏢 Venda de veículos de uma loja para outra (B2B)", "🔑 Aluguel de frotas", "👨‍⚖️ Leilão público"], correct: 1, points: 10 },
+            { stage: 1, question: "🎯 Quem é o cliente-alvo da nossa plataforma de repasse?", options: ["👨‍👩‍👧‍👦 Pessoas físicas buscando um carro", "🏬 Lojistas e revendedores de veículos", "🛠️ Oficinas mecânicas", "🛡️ Seguradoras"], correct: 1, points: 10 },
+            { stage: 1, question: "✨ Qual a principal vantagem que nossa plataforma oferece a um lojista?", options: ["📜 Garantia de fábrica extendida", "🔄 Acesso rápido e constante a um novo estoque", "💰 Financiamento para o consumidor final", " chauffeur Serviço de motorista particular"], correct: 1, points: 10 },
+            { stage: 1, question: "🚜 Qual o foco principal da plataforma ARREMAQ?", options: ["🚗 Carros populares", "🏗️ Máquinas pesadas e equipamentos agrícolas", "🚤 Barcos e Lanchas", "🏠 Imóveis"], correct: 1, points: 10 },
+            { stage: 1, question: "👷 Quem é o principal cliente da ARREMAQ?", options: ["👩‍🌾 Agronegócio e construtoras", "🌇 Agências de publicidade", "👨‍⚕️ Hospitais", "👩‍🏫 Escolas"], correct: 0, points: 10 },
+
+            // Nível 2: Produtos e Serviços (5 perguntas)
+            { stage: 2, question: "🔍 Qual a ferramenta da Auto Arremate® que inspeciona o veículo com inteligência artificial?", options: ["📸 PhotoScan", "💡 RaioX", "⚡ TurboScan", "🗺️ MapaVeicular"], correct: 1, points: 20 },
+            { stage: 2, question: "📈 O que é o RaioX+?", options: ["Um scanner de peças", "Uma versão do RaioX com consulta de histórico veicular", "Um upgrade de motor para carros", "Um novo tipo de vistoria manual"], correct: 1, points: 20 },
+            { stage: 2, question: "💰 Como a Auto Arremate® ajuda o lojista a ganhar mais dinheiro?", options: ["Comprando carros dele diretamente", "Aumentando a liquidez e rentabilidade do estoque de repasse", "Vendendo seguros mais baratos", "Oferecendo lavagem de carros grátis"], correct: 1, points: 20 },
+            { stage: 2, question: "🔄 Qual a solução para locadoras que precisam 'aposentar' carros da frota?", options: ["Doação para instituições", "Remarketing de frotas", "Guarda em galpões", "Desmanche"], correct: 1, points: 20 },
+            { stage: 2, question: "⚙️ A Arremaq® lida com qual tipo de equipamento?", options: ["🛵 Motos e patinetes", "🚜 Tratores, empilhadeiras e caminhões", "🚁 Drones e helicópteros", "🚲 Bicicletas elétricas"], correct: 1, points: 20 },
+
+            // Nível 3: Vendas e Metodologia (5 perguntas)
+            { stage: 3, question: "🤔 Qual metodologia de vendas foca em Situação, Problema, Implicação e Necessidade de Solução?", options: ["🤝 AIDA", "💡 SPIN Selling", "🎯 SNAP Selling", "🚀 BANT"], correct: 1, points: 30 },
+            { stage: 3, question: "⚡ Qual metodologia de vendas é focada em ser Simples, iNestimável, Alinhado e Prioritário?", options: ["📈 Consultative Selling", "🎯 SNAP Selling", "🗣️ Challenger Sale", "🔄 Solution Selling"], correct: 1, points: 30 },
+            { stage: 3, question: "🧠 O que significa 'qualificar um lead'?", options: ["Convidá-lo para um café", "Avaliar se ele tem potencial para se tornar um cliente", "Enviar um catálogo de produtos", "Pedir um feedback sobre o atendimento"], correct: 1, points: 30 },
+            { stage: 3, question: "🛡️ O que é a técnica 'Sentir, Sentiu, Descobriu'?", options: ["Um exercício de empatia", "Uma forma de contornar objeções de clientes", "Uma tática para fechar vendas rápidas", "Um método para identificar leads"], correct: 1, points: 30 },
+            { stage: 3, question: "🗺️ O que são 'cadências de prospecção'?", options: ["Músicas para trabalhar", "Sequências e frequências de contato com leads", "Treinos de vendas diários", "Mapas de estradas"], correct: 1, points: 30 },
+
+            // Nível 4: Mercado e Estratégia (5 perguntas)
+            { stage: 4, question: "📊 Qual o principal KPI (indicador) para medir o sucesso da nossa plataforma?", options: ["Número de acessos ao site", "Volume e giro do estoque de repasse dos clientes", "Quantidade de e-mails enviados", "Número de curtidas nas redes sociais"], correct: 1, points: 40 },
+            { stage: 4, question: "🔗 Por que a validação de CNPJ é crucial em vendas B2B?", options: ["Para saber o endereço da empresa", "Para garantir a saúde financeira e a segurança da parceria", "Para enviar brindes corporativos", "Para verificar se a empresa tem estacionamento"], correct: 1, points: 40 },
+            { stage: 4, question: "✍️ Qual a importância dos 'gatilhos mentais' na comunicação de vendas?", options: ["São palavras-chave para SEO", "Ajudam a persuadir e influenciar a decisão do cliente", "São termos técnicos do mercado", "Apenas para deixar a conversa mais divertida"], correct: 1, points: 40 },
+            { stage: 4, question: "📚 O que é o Glossário do Playbook?", options: ["Uma lista de livros para ler", "Um dicionário de termos técnicos do nosso mercado", "Um guia de pronúncia de marcas de carro", "Uma coleção de piadas sobre vendas"], correct: 1, points: 40 },
+            { stage: 4, question: "🃏 O que são os 'AutoCards™'?", options: ["Cartões de visita digitais", "Uma ferramenta de gamificação para prospecção e vendas", "Cartões de crédito exclusivos", "Baralhos temáticos de carros"], correct: 1, points: 40 },
+
+            // Nível 5: Campeão do Repasse (5 perguntas)
+            { stage: 5, question: "📉 Qual o impacto de uma alta na taxa de juros (SELIC) no nosso negócio?", options: ["🥳 Positivo, pois os carros ficam mais baratos", "😟 Negativo, pois o crédito para o consumidor final fica mais caro, diminuindo a venda nas lojas parceiras", "🤷 Nulo", "🆕 Apenas afeta a venda de carros 0km"], correct: 1, points: 50 },
+            { stage: 5, question: "🎁 O que é 'Cross-sell' e como poderíamos aplicá-lo?", options: ["❌ Vender carros com problemas", "🤝 Oferecer serviços adicionais ao lojista, como financiamento para o estoque dele (Capital de Giro) ou relatórios de mercado", "🔩 Vender peças usadas", "🚫 É uma manobra de vendas ilegal"], correct: 1, points: 50 },
+            { stage: 5, question: "📈 O que é 'Up-sell' e como aplicá-lo?", options: ["Vender um produto de menor valor", "Convencer o cliente a comprar um produto ou serviço mais caro ou com mais funcionalidades", "Vender para o mesmo cliente repetidamente", "Trocar um produto por outro"], correct: 1, points: 50 },
+            { stage: 5, question: "🌟 Qual a importância do feedback do cliente?", options: ["Apenas para inflar o ego", "Para melhorar continuamente nossos produtos e serviços", "Não é importante", "Somente para resolver problemas pontuais"], correct: 1, points: 50 },
+            { stage: 5, question: "🏆 Qual a melhor atitude para um 'Campeão do Repasse'?", options: ["Desistir no primeiro obstáculo", "Manter-se atualizado e buscar a excelência contínua", "Ignorar as mudanças do mercado", "Focar apenas em metas de curto prazo"], correct: 1, points: 50 },
+
+            // Nível 6 (5 perguntas)
+            { stage: 6, question: "🤔 Qual a importância da análise de mercado para a Auto Arremate?", options: ["Apenas para curiosidade", "Identificar novas oportunidades e ameaças", "Determinar o preço do café", "Escolher o time de futebol"], correct: 1, points: 60 },
+            { stage: 6, question: "📊 Qual o papel da tecnologia na otimização do repasse de veículos?", options: ["Aumentar a burocracia", "Agilizar processos e aumentar a precisão das avaliações", "Substituir completamente a equipe", "Diminuir a comunicação com o cliente"], correct: 1, points: 60 },
+            { stage: 6, question: "🌍 Como a Auto Arremate® e Arremaq® contribuem para a economia circular?", options: ["Apenas vendendo carros usados", "Facilitando a reutilização e o giro de ativos, reduzindo o desperdício", "Produzindo novos veículos", "Descartando materiais"], correct: 1, points: 60 },
+            { stage: 6, question: "💡 Qual o diferencial competitivo da nossa plataforma?", options: ["Preços mais baixos sempre", "Inteligência de dados e rede exclusiva de lojistas", "Atendimento apenas presencial", "Foco em um único tipo de veículo"], correct: 1, points: 60 },
+            { stage: 6, question: "🗣️ Como podemos usar depoimentos de clientes para impulsionar vendas?", options: ["Ignorando-os", "Como prova social e ferramenta de credibilidade", "Apenas para o marketing interno", "Não faz diferença"], correct: 1, points: 60 },
+
+            // Nível 7 (5 perguntas)
+            { stage: 7, question: "🔒 Qual a importância da segurança de dados para nossos clientes?", options: ["É irrelevante", "Garantir a privacidade e proteger informações sensíveis", "Apenas para cumprir regulamentos", "Deixar os dados expostos"], correct: 1, points: 70 },
+            { stage: 7, question: "🌱 Como o conceito de 'long-tail' se aplica ao nosso mercado de repasse?", options: ["Focar apenas nos carros mais populares", "Atender a nichos de mercado e veículos específicos com menor volume, mas alta demanda combinada", "Vender somente veículos de luxo", "Ignorar veículos incomuns"], correct: 1, points: 70 },
+            { stage: 7, question: "🔄 Qual a importância da agilidade no processo de repasse?", options: ["Não há necessidade de pressa", "Minimizar o tempo de estoque parado e otimizar o capital de giro", "Apenas para cumprir prazos internos", "Aumentar a complexidade"], correct: 1, points: 70 },
+            { stage: 7, question: "🤝 Como construir um relacionamento duradouro com o lojista?", options: ["Oferecendo o menor preço sempre", "Através de suporte contínuo, transparência e soluções personalizadas", "Apenas com visitas esporádicas", "Limitando o contato ao essencial"], correct: 1, points: 70 },
+            { stage: 7, question: "📈 O que significa 'escalabilidade' no nosso modelo de negócio?", options: ["Crescer em tamanho físico apenas", "Capacidade de crescer e expandir operações sem perder eficiência ou qualidade", "Manter o negócio pequeno", "Diminuir o número de clientes"], correct: 1, points: 70 },
+
+            // Nível 8 (5 perguntas)
+            { stage: 8, question: "⚡ Qual o impacto da inteligência artificial nas avaliações de veículos?", options: ["Torna o processo mais lento", "Aumenta a precisão, agilidade e padronização das análises", "Reduz a confiabilidade", "Cria mais erros"], correct: 1, points: 80 },
+            { stage: 8, question: "🚀 Como a inovação contínua beneficia nossos parceiros?", options: ["Não tem impacto", "Oferecendo novas ferramentas e soluções para aumentar a competitividade e lucratividade", "Apenas muda a interface", "Cria complexidade desnecessária"], correct: 1, points: 80 },
+            { stage: 8,
+                question: "🌐 Por que a presença digital é vital para a Auto Arremate e Arremaq?",
+                options: ["É apenas uma tendência", "Permite alcançar um público maior, aumentar a visibilidade e facilitar transações online", "Só serve para mostrar fotos", "Diminui o alcance"],
+                correct: 1,
+                points: 80
+            },
+            { stage: 8,
+                question: "🌱 Qual o papel da sustentabilidade em nosso nicho de mercado?",
+                options: ["Não é relevante", "Promover a reutilização de bens e reduzir o impacto ambiental do descarte prematuro", "Aumentar o consumo de recursos", "Gerar mais lixo"],
+                correct: 1,
+                points: 80
+            },
+            { stage: 8,
+                question: "🏆 Como um vendedor se torna um 'Top Performer' em nossa equipe?",
+                options: ["Apenas vendendo muito", "Dominando o produto, as metodologias de vendas e construindo relacionamentos sólidos com os clientes", "Contando com a sorte", "Trabalhando sozinho"],
+                correct: 1,
+                points: 80
+            },
+
+            // Nível 9 (5 perguntas)
+            { stage: 9, question: "🔍 Qual a importância da segmentação de clientes?", options: ["Não há necessidade", "Personalizar a abordagem de vendas e marketing para atender às necessidades específicas de cada grupo", "Tratar todos os clientes da mesma forma", "Aumentar a complexidade"], correct: 1, points: 90 },
+            { stage: 9, question: "💡 Como a inteligência de mercado pode ser usada para identificar tendências?", options: ["Adivinhando o futuro", "Analisando dados de vendas, comportamento do consumidor e fatores econômicos", "Seguindo a opinião popular", "Ignorando os números"], correct: 1, points: 90 },
+            { stage: 9, question: "🗣️ O que é 'comunicação não-violenta' e sua aplicação em vendas?", options: ["Falar sem emoção", "Uma abordagem que foca na empatia e na resolução de conflitos para construir relações mais fortes com o cliente", "Impor a sua vontade", "Criticar o cliente"], correct: 1, points: 90 },
+            { stage: 9, question: "🤝 Qual o valor de uma rede de parceiros robusta para o nosso negócio?", options: ["É insignificante", "Amplia o alcance, gera novas oportunidades e fortalece o ecossistema de repasse", "Apenas para ter mais contatos", "Cria concorrência interna"], correct: 1, points: 90 },
+            { stage: 9, question: "🚀 Como a mentalidade de crescimento ('growth mindset') se aplica ao time de vendas?", options: ["Acreditar que o talento é fixo", "Adotar uma postura de aprendizado contínuo, resiliência diante de desafios e busca por aprimoramento", "Desistir após o fracasso", "Apenas focar em resultados imediatos"], correct: 1, points: 90 },
+
+            // Nível 10: Desafio Final (5 perguntas)
+            { stage: 10, question: "🔮 Qual o futuro do mercado de repasse de veículos e equipamentos?", options: ["Será estagnado", "Cada vez mais digital, tecnológico e focado em soluções ágeis e sustentáveis", "Voltará ao modelo tradicional", "Será dominado por apenas um player"], correct: 1, points: 100 },
+            { stage: 10, question: "🌟 Como a Auto Arremate e Arremaq se posicionam como líderes de mercado?", options: ["Pela sorte", "Pela inovação constante, expertise e compromisso com o sucesso dos parceiros", "Copiando a concorrência", "Ignorando as necessidades do cliente"], correct: 1, points: 100 },
+            { stage: 10, question: "🏅 Qual o legado que queremos construir para os nossos clientes?", options: ["Apenas uma transação", "Uma parceria de valor, sucesso compartilhado e otimização contínua de seus negócios", "Um relacionamento breve", "Apenas um bom preço"], correct: 1, points: 100 },
+            { stage: 10, question: "🌐 Como a globalização impacta o mercado de repasse?", options: ["Não há impacto", "Cria novas oportunidades de exportação/importação e aumenta a complexidade das cadeias de valor", "Limita o mercado a nível local", "Simplifica tudo"], correct: 1, points: 100 },
+            { stage: 10, question: "👑 Qual o principal conselho para um 'Campeão do Repasse' continuar no topo?", options: ["Relaxar após a vitória", "Nunca parar de aprender, adaptar-se e buscar novas formas de gerar valor", "Confiar apenas na experiência passada", "Ignorar a concorrência"], correct: 1, points: 100 },
+        ];
+
+
+        const QUESTIONS_PER_STAGE = 5; // 5 perguntas por nível
+        const TOTAL_STAGES = ALL_QUESTIONS.length / QUESTIONS_PER_STAGE; // Total de níveis
+        const TIME_PER_QUESTION = 10; // Segundos por pergunta
+
+
+        // =====================================================================
+        // COMPONENTES DA UI (JSX Transpilado para JS Puro)
+        // =====================================================================
+
+        // Contexto de Áudio para o Tone.js
+        const AudioContext = React.createContext(null);
+
+        // O AudioProvider e as funções playSound e initializeAudio vêm do utils.js
+        // Aqui, apenas usamos o React.useContext
+        const AudioProvider = ({ children }) => {
+            const synth = React.useRef(null);
+            const audioContextStarted = React.useRef(false);
+
+            React.useEffect(() => {
+                // Tone.js já é inicializado na primeira interação em utils.js
+                // Aqui apenas garantimos que a referência do synth esteja disponível para o contexto
+                import('../src/assets/js/utils.js').then(({ initializeAudio, playSound: importedPlaySound }) => {
+                    if (!synth.current) {
+                        // initializeAudio já cria e retorna o synth, mas não o expõe diretamente
+                        // Precisamos re-criar ou obter uma referência
+                        // Para este cenário, o ideal é que utils.js exporte o synth ou uma forma de acessá-lo.
+                        // Para a demo, vamos criar um synth local aqui se não tiver sido criado.
+                        if (!importedPlaySound.synth) { // Verifique se o utils.js já expôs o synth
+                           synth.current = new Tone.Synth({
+                                oscillator: { type: "sine" },
+                                envelope: {
+                                    attack: 0.01,
+                                    decay: 0.1,
+                                    sustain: 0.05,
+                                    release: 0.5
+                                }
+                            }).toDestination();
+                        } else {
+                            synth.current = importedPlaySound.synth;
+                        }
+                    }
+                });
+            }, []);
+
+            // A função playSound já está sendo importada do utils.js
+            // mas precisamos passá-la pelo contexto do React
+            const playSoundMemoized = React.useCallback((type) => {
+                import('../src/assets/js/utils.js').then(({ playSound: importedPlaySound }) => {
+                    importedPlaySound(type); // Chama a função playSound do utils.js
+                });
+            }, []);
+
+
+            return (
+                React.createElement(AudioContext.Provider, { value: { playSound: playSoundMemoized } },
+                    children
+                )
+            );
+        };
+
+        /**
+         * Componente: PlayerSetup
+         * Tela inicial para inserir os nomes dos jogadores.
+         */
+        const PlayerSetup = ({ onSetupComplete }) => {
+            const [players, setPlayers] = React.useState(Array(2).fill('')); // Começa com 2 inputs visíveis
+            const [error, setError] = React.useState('');
+            const { playSound } = React.useContext(AudioContext);
+
+            const handlePlayerNameChange = (index, name) => {
+                const newPlayers = [...players];
+                newPlayers[index] = name;
+                setPlayers(newPlayers);
+                if (error) setError('');
+            };
+
+            const addPlayerInput = () => {
+                playSound('click');
+                if (players.length < 10) { // Limite de 10 jogadores
+                    setPlayers([...players, '']);
+                }
+            };
+
+            const removePlayerInput = (indexToRemove) => {
+                playSound('click');
+                if (players.length > 1) { // Garante pelo menos um jogador
+                    setPlayers(players.filter((_, index) => index !== indexToRemove));
+                }
+            };
+
+            const startGame = () => {
+                playSound('click');
+                const validPlayers = players
+                    .map(name => name.trim())
+                    .filter(name => name !== '');
+
+                if (validPlayers.length === 0) {
+                    setError('Insira o nome de pelo menos um jogador para começar!');
+                    return;
+                }
+
+                const finalPlayers = validPlayers.map(name => ({ name, score: 0, currentStageQuestionsAnswered: 0 }));
+                onSetupComplete(finalPlayers);
+            };
+
+            return (
+                React.createElement("div", { className: "w-full max-w-2xl mx-auto p-8 bg-content-light dark:bg-content-dark rounded-2xl card-base border border-border-color-light dark:border-border-color-dark animate-fade-in transform-gpu scale-100 opacity-100" },
+                    React.createElement("div", { className: "text-center mb-6" },
+                        React.createElement("h2", { className: "text-4xl font-extrabold text-aa-dark-blue dark:text-text-headings-dark" },
+                            React.createElement(TrophyIcon, { className: "inline-block mr-2 animate-bounce-subtle" }), " DESAFIO DOS CAMPEÕES ", React.createElement(TrophyIcon, { className: "inline-block ml-2 animate-bounce-subtle" })
+                        ),
+                        React.createElement("h3", { className: "text-xl mt-3 font-semibold text-text-muted-light dark:text-text-muted-dark" },
+                            React.createElement("span", { className: "text-aa-green dark:text-aa-green-lighter" }, "AUTO ARREMATE"), " & ", React.createElement("span", { className: "text-arremaq-orange dark:text-arremaq-orange-lighter" }, "ARREMAQ")
+                        ),
+                        React.createElement("p", { className: "text-md text-text-muted-light dark:text-text-muted-dark mt-2" },
+                            "TESTE SEU CONHECIMENTO ESTRATÉGICO!"
+                        )
+                    ),
+                    React.createElement("p", { className: "text-center text-lg text-text-body-light dark:text-text-body-dark mb-8 px-4" },
+                        "🚀 Prepare-se para acelerar seu conhecimento! Insira os nomes dos jogadores (até 10) para dar a largada."
+                    ),
+                    React.createElement("div", { className: "space-y-4 max-h-64 overflow-y-auto pr-2 custom-scrollbar" },
+                        players.map((name, index) => (
+                            React.createElement("div", { key: index, className: "flex items-center gap-2" },
+                                React.createElement("input", { type: "text", value: name, onChange: (e) => handlePlayerNameChange(index, e.target.value), placeholder: `Nome do Jogador ${index + 1}`, className: "form-input-base w-full px-5 py-3 rounded-lg focus:ring-4 focus:ring-aa-green dark:focus:ring-aa-green-lighter shadow-md" }),
+                                players.length > 1 && (
+                                    React.createElement("button", { onClick: () => removePlayerInput(index), className: "btn btn-secondary flex-shrink-0 px-3 py-2" },
+                                        React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "20", height: "20", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", className: "lucide lucide-minus" }, React.createElement("path", { d: "M5 12h14" }))
+                                    )
+                                )
+                            )
+                        ))
+                    ),
+                    players.length < 10 && (
+                        React.createElement("div", { className: "text-center mt-4" },
+                            React.createElement("button", { onClick: addPlayerInput, className: "btn btn-outline" },
+                                "+ Adicionar Jogador"
+                            )
+                        )
+                    ),
+                    error && React.createElement("p", { className: "text-red-500 text-center mt-4 font-semibold animate-shake" }, error),
+                    React.createElement("div", { className: "text-center mt-8" },
+                        React.createElement("button", { onClick: startGame, className: "btn btn-primary" },
+                            "INICIAR DESAFIO! ", React.createElement(ArrowRightIcon, null)
+                        )
+                    )
+                )
+            );
+        };
+
+        /**
+         * Componente: Scoreboard
+         * Exibe o placar dos jogadores em tempo real.
+         */
+        const Scoreboard = ({ players, currentStage, currentQuestionNum }) => {
+            const sortedPlayers = React.useMemo(() =>
+                [...players].sort((a, b) => b.score - a.score),
+                [players]
+            );
+
+            return (
+                React.createElement("div", { className: "w-full bg-gradient-to-br from-purple-100 to-blue-100 dark:from-slate-700 dark:to-slate-900 p-6 rounded-2xl card-base border border-border-color-light dark:border-border-color-dark transform-gpu animate-slide-in-right" },
+                    React.createElement("h3", { className: "text-2xl font-bold text-center mb-4 text-aa-dark-blue dark:text-text-headings-dark" }, "🏅 Placar Atual"),
+                    React.createElement("div", { className: "flex justify-between items-center bg-cards-section-light dark:bg-cards-section-dark p-3 rounded-lg mb-4 shadow-sm border border-border-color-light dark:border-border-color-dark" },
+                        React.createElement("span", { className: "font-semibold text-text-body-light dark:text-text-body-dark" }, "Nível: ", React.createElement("span", { className: "font-bold" }, currentStage, " / ", TOTAL_STAGES)),
+                        React.createElement("span", { className: "font-semibold text-text-body-light dark:text-text-body-dark" }, "Pergunta: ", React.createElement("span", { className: "font-bold" }, currentQuestionNum, " / ", QUESTIONS_PER_STAGE))
+                    ),
+                    React.createElement("ul", { className: "space-y-3" },
+                        sortedPlayers.map((player, index) => (
+                            React.createElement("li", { key: player.name, className: "flex justify-between items-center text-text-body-light dark:text-text-body-dark bg-content-light dark:bg-content-dark px-4 py-3 rounded-xl transition-all duration-500 transform hover:scale-[1.02] hover:shadow-lg focus-within:ring-2 focus-within:ring-aa-green border border-border-color-light dark:border-border-color-dark" },
+                                React.createElement("div", { className: "flex items-center" },
+                                    React.createElement("span", { className: "font-extrabold text-lg mr-3 text-aa-dark-blue dark:text-text-headings-dark" }, index + 1, "."),
+                                    React.createElement("span", { className: "font-semibold text-lg" }, player.name)
+                                ),
+                                React.createElement("span", { className: "font-bold text-xl text-aa-green dark:text-aa-green-lighter animate-score-pop-individual" }, player.score, " ", React.createElement("span", { className: "text-sm" }, "pts"))
+                            )
+                        ))
+                    )
+                )
+            );
+        };
+
+        /**
+         * Componente: PointGainDisplay
+         * Exibe a pontuação ganha com uma animação.
+         */
+        const PointGainDisplay = ({ points, onAnimationEnd }) => {
+            React.useEffect(() => {
+                const timer = setTimeout(() => {
+                    onAnimationEnd();
+                }, 1000); // Duração da animação de flutuação
+                return () => clearTimeout(timer);
+            }, [onAnimationEnd]);
+
+            return (
+                React.createElement("div", { className: "absolute inset-0 flex items-center justify-center pointer-events-none" },
+                    React.createElement("span", { className: "text-aa-green text-5xl font-extrabold animate-float-up opacity-0 drop-shadow-lg" }, "+", points)
+                )
+            );
+        };
+
+        /**
+         * Componente: QuizScreen
+         * A tela principal do jogo, onde as perguntas e respostas acontecem.
+         */
+        const QuizScreen = ({ players, onQuizEnd }) => {
+            const { playSound } = React.useContext(AudioContext);
+
+            const [phase, setPhase] = React.useState('question'); // Fases: 'question', 'answering', 'results'
+            const [internalPlayers, setInternalPlayers] = React.useState(players);
+            const [currentQuestionIndex, setCurrentQuestionIndex] = React.useState(0);
+            const [timer, setTimer] = React.useState(TIME_PER_QUESTION);
+            const [playerAnswers, setPlayerAnswers] = React.useState([]);
+            const [activeAnsweringPlayer, setActiveAnsweringPlayer] = React.useState(0);
+            const [key, setKey] = React.useState(0); // Chave para forçar a re-renderização e reiniciar a animação do timer
+            const [showPointsGained, setShowPointsGained] = React.useState(false);
+            const [lastPointsGained, setLastPointsGained] = React.useState(0);
+            const [selectedOptionIndex, setSelectedOptionIndex] = React.useState(null); // Para destacar a opção clicada
+            const [currentStageQuestionsAnswered, setCurrentStageQuestionsAnswered] = React.useState(0); // Perguntas respondidas no nível atual
+
+            const currentQuestion = React.useMemo(() => ALL_QUESTIONS[currentQuestionIndex], [currentQuestionIndex]);
+            const currentStage = currentQuestion.stage;
+
+            // Lógica para avançar entre as fases do jogo
+            const nextPhase = React.useCallback(() => {
+                playSound('click');
+                if (phase === 'question') {
+                    setPhase('answering');
+                } else if (phase === 'results') {
+                    setSelectedOptionIndex(null); // Limpa a seleção
+                    const nextQuestionIndex = currentQuestionIndex + 1;
+                    const nextStageQuestionCount = currentStageQuestionsAnswered + 1;
+
+                    setCurrentStageQuestionsAnswered(nextStageQuestionCount); // Incrementa o contador de perguntas respondidas no estágio
+
+                    if (nextStageQuestionCount >= QUESTIONS_PER_STAGE) { // Se todas as perguntas do nível foram respondidas
+                        if (currentStage < TOTAL_STAGES) { // Se não for o último nível
+                            playSound('stage_complete');
+                            setTimeout(() => { // Pequeno delay para a transição
+                                setCurrentQuestionIndex(nextQuestionIndex);
+                                setPhase('question');
+                                setPlayerAnswers([]);
+                                setActiveAnsweringPlayer(0);
+                                setTimer(TIME_PER_QUESTION);
+                                setKey(prev => prev + 1);
+                                setCurrentStageQuestionsAnswered(0); // Reinicia para o novo estágio
+                            }, 1500); // Delay para o som de stage_complete
+                        } else { // Se for o último nível
+                            playSound('game_over');
+                            onQuizEnd(internalPlayers);
+                        }
+                    } else if (nextQuestionIndex < ALL_QUESTIONS.length) { // Se há mais perguntas no estágio atual
+                        setCurrentQuestionIndex(nextQuestionIndex);
+                        setPhase('question');
+                        setPlayerAnswers([]);
+                        setActiveAnsweringPlayer(0);
+                        setTimer(TIME_PER_QUESTION);
+                        setKey(prev => prev + 1);
+                    } else { // Caso todas as perguntas tenham sido respondidas e o jogo chegou ao fim
+                        playSound('game_over');
+                        onQuizEnd(internalPlayers);
+                    }
+                }
+            }, [phase, currentQuestionIndex, currentStageQuestionsAnswered, currentStage, onQuizEnd, internalPlayers, playSound]);
+
+            // Efeito para controlar o temporizador
+            React.useEffect(() => {
+                if (phase !== 'question') return;
+                const interval = setInterval(() => {
+                    setTimer(t => {
+                        if (t > 1) {
+                            if (t <= 5 && t > 1) { // Alerta sonoro nos últimos 5 segundos
+                                playSound('timer_warning');
+                            }
+                            return t - 1;
+                        }
+                        nextPhase(); // Move para a fase de resposta quando o tempo acaba
+                        return 0;
+                    });
+                }, 1000);
+                return () => clearInterval(interval);
+            }, [phase, nextPhase, playSound]);
+
+            // Lida com a resposta de um jogador
+            const handleAnswer = (optionIndex) => {
+                playSound('click'); // Som de clique para a opção
+                setSelectedOptionIndex(optionIndex); // Destaca a opção clicada
+
+                // Verifica se o jogador já respondeu nesta rodada
+                const playerAlreadyAnswered = playerAnswers.some(ans => ans.playerIndex === activeAnsweringPlayer);
+                if (playerAlreadyAnswered) {
+                    return; // Impede que o jogador responda múltiplas vezes
+                }
+
+                const isCorrect = optionIndex === currentQuestion.correct;
+                let pointsGained = 0;
+
+                if (isCorrect) {
+                    pointsGained = currentQuestion.points;
+                    playSound('success'); // Som de acerto (usando 'success' do utils.js)
+                    setLastPointsGained(pointsGained);
+                    setShowPointsGained(true);
+                } else {
+                    playSound('error'); // Som de erro (usando 'error' do utils.js)
+                }
+
+                const updatedPlayers = [...internalPlayers];
+                updatedPlayers[activeAnsweringPlayer].score += pointsGained;
+                updatedPlayers[activeAnsweringPlayer].currentStageQuestionsAnswered = currentStageQuestionsAnswered + 1; // Incrementa perguntas respondidas pelo jogador
+                setInternalPlayers(updatedPlayers);
+
+                const newAnswers = [...playerAnswers, { playerIndex: activeAnsweringPlayer, answer: optionIndex }];
+                setPlayerAnswers(newAnswers);
+
+                // Avança para o próximo jogador ou para a fase de resultados
+                if (activeAnsweringPlayer < internalPlayers.length - 1) {
+                    setTimeout(() => {
+                        setActiveAnsweringPlayer(prev => prev + 1);
+                        setShowPointsGained(false);
+                        setSelectedOptionIndex(null);
+                    }, 1200);
+                } else {
+                    setTimeout(() => {
+                        setPhase('results');
+                        setShowPointsGained(false);
+                    }, 1200);
+                }
+            };
+
+            const timerPercentage = (timer / TIME_PER_QUESTION) * 100;
+            const timerColorClass = timer <= 5 ? 'text-arremaq-orange animate-pulse-fast' : 'text-aa-green'; // Ajustadas cores para design tokens
+
+            return (
+                React.createElement("div", { className: "w-full max-w-7xl mx-auto p-4 md:p-8" },
+                    React.createElement("div", { className: "grid grid-cols-1 lg:grid-cols-3 gap-8" },
+                        React.createElement("div", { className: "lg:col-span-2 relative" },
+                            showPointsGained && React.createElement(PointGainDisplay, { points: lastPointsGained, onAnimationEnd: () => setShowPointsGained(false) }),
+
+                            // Fase da Pergunta
+                            phase === 'question' && (
+                                React.createElement("div", { key: key, className: "card-base p-8 rounded-2xl animate-fade-in transform-gpu" },
+                                    React.createElement("div", { className: "flex justify-between items-center mb-6 pb-4 border-b border-border-color-light dark:border-border-color-dark" },
+                                        React.createElement("span", { className: "text-lg font-bold bg-gradient-to-r from-aa-green to-arremaq-orange text-white px-4 py-2 rounded-full shadow-lg" }, "NÍVEL ", currentStage, " / ", TOTAL_STAGES),
+                                        React.createElement("span", { className: "text-xl font-semibold text-text-body-light dark:text-text-body-dark" },
+                                            "Pergunta ", (currentQuestionIndex % QUESTIONS_PER_STAGE) + 1, " de ", QUESTIONS_PER_STAGE
+                                        )
+                                    ),
+                                    React.createElement("div", { className: "flex flex-col md:flex-row items-center justify-center gap-8 mb-8 text-center md:text-left" },
+                                        React.createElement("div", { className: "relative w-32 h-32 flex-shrink-0 flex items-center justify-center" },
+                                            React.createElement("svg", { className: "w-full h-full transform -rotate-90 absolute top-0 left-0", viewBox: "0 0 36 36" }, React.createElement("circle", { cx: "18", cy: "18", r: "16", fill: "none", className: "stroke-current text-border-color-light dark:text-border-color-dark", strokeWidth: "3" }), React.createElement("circle", { cx: "18", cy: "18", r: "16", fill: "none", className: `stroke-current transition-all duration-1000 ease-linear ${timerColorClass}`, strokeWidth: "3", strokeDasharray: `${timerPercentage}, 100` })),
+                                            React.createElement("div", { className: "absolute flex flex-col items-center justify-center inset-0 text-text-body-light dark:text-text-body-dark" }, React.createElement(ClockIcon, { className: "w-8 h-8" }), React.createElement("span", { className: "text-3xl font-extrabold mt-1" }, timer), React.createElement("span", { className: "text-sm" }, "seg."))
+                                        ),
+                                        React.createElement("h2", { className: "text-2xl md:text-3xl font-bold text-text-headings-light dark:text-text-headings-dark leading-snug drop-shadow-md flex-grow" },
+                                            currentQuestion.question
+                                        )
+                                    ),
+                                    React.createElement("div", { className: "text-center mt-6" },
+                                        React.createElement("button", { onClick: nextPhase, className: "btn btn-primary" },
+                                            "PRONTO PARA RESPONDER! ", React.createElement(ArrowRightIcon, null)
+                                        )
+                                    )
+                                )
+                            ),
+                            // Fase da Resposta
+                            phase === 'answering' && (
+                                React.createElement("div", { key: activeAnsweringPlayer, className: "card-base p-8 rounded-2xl animate-slide-in-left transform-gpu" },
+                                    React.createElement("h2", { className: "text-3xl font-bold text-center text-aa-dark-blue dark:text-text-headings-dark mb-4 animate-pulse-subtle" }, "🤫 Vez de ", React.createElement("span", { className: "bg-cards-section-light dark:bg-cards-section-dark px-3 py-1 rounded-md" }, internalPlayers[activeAnsweringPlayer].name), "..."),
+                                    React.createElement("p", { className: "text-center text-text-muted-light dark:text-text-muted-dark text-lg mb-8" }, "(Os outros não olhem! Escolha sua resposta.)"),
+                                    React.createElement("div", { className: "space-y-4" },
+                                        currentQuestion.options.map((option, index) => (
+                                            React.createElement("button", { key: index, onClick: () => handleAnswer(index), disabled: selectedOptionIndex !== null, className: `w-full text-left p-4 rounded-xl font-semibold text-lg transition-all duration-300 border-2 ${selectedOptionIndex === index ? 'border-aa-green dark:border-aa-green-lighter bg-cards-section-light dark:bg-cards-section-dark shadow-lg' : 'border-transparent bg-content-light dark:bg-content-dark hover:bg-cards-section-light dark:hover:bg-cards-section-dark hover:scale-[1.01] hover:shadow-md'} transform-gpu focus:outline-none focus:ring-2 focus:ring-aa-green` },
+                                                option
+                                            )
+                                        ))
+                                    )
+                                )
+                            ),
+                            // Fase dos Resultados
+                            phase === 'results' && (
+                                React.createElement("div", { className: "card-base p-8 rounded-2xl animate-fade-in transform-gpu" },
+                                    React.createElement("h2", { className: "text-3xl font-bold text-center mb-6 text-aa-dark-blue dark:text-text-headings-dark" }, "🎉 Resultado da Rodada! 🎉"),
+                                    React.createElement("p", { className: "text-xl font-semibold text-center mb-3 text-text-body-light dark:text-text-body-dark" }, "A resposta correta é:"),
+                                    React.createElement("div", { className: "bg-aa-green-lighter dark:bg-aa-green-darkest p-5 rounded-lg text-center font-bold text-2xl text-aa-green-darker dark:text-aa-green-lighter mb-8 shadow-inner animate-pop-in border border-aa-green dark:border-aa-green-text-dark-theme" },
+                                        currentQuestion.options[currentQuestion.correct]
+                                    ),
+                                    React.createElement("ul", { className: "space-y-3" },
+                                        internalPlayers.map((player, index) => {
+                                            const playerAnswer = playerAnswers.find(a => a.playerIndex === index);
+                                            const isCorrect = playerAnswer?.answer === currentQuestion.correct;
+                                            const answeredOptionText = currentQuestion.options[playerAnswer?.answer] || "Não respondeu";
+                                            return (
+                                                React.createElement("li", { key: index, className: `flex justify-between items-center p-4 rounded-md shadow-sm transition-all duration-300 ${isCorrect ? 'bg-aa-green-pastel dark:bg-aa-green-darkest/20' : 'bg-arremaq-orange-pastel dark:bg-arremaq-orange-darkest/20'} border ${isCorrect ? 'border-aa-green-lighter dark:border-aa-green-darker' : 'border-arremaq-orange-lighter dark:border-arremaq-orange-darker'}` },
+                                                    React.createElement("span", { className: "font-semibold text-text-body-light dark:text-text-body-dark text-lg" }, player.name),
+                                                    React.createElement("div", { className: "flex items-center gap-2" },
+                                                        React.createElement("span", { className: `text-sm ${isCorrect ? 'text-aa-green-darker dark:text-aa-green-lighter' : 'text-arremaq-orange-darker dark:text-arremaq-orange-lighter'}` }, answeredOptionText),
+                                                        isCorrect ? React.createElement(CheckCircleIcon, null) : React.createElement(XCircleIcon, null)
+                                                    )
+                                                )
+                                            );
+                                        })
+                                    ),
+                                    React.createElement("div", { className: "text-center mt-6" },
+                                        React.createElement("button", { onClick: nextPhase, className: "btn btn-primary" }, "Próxima Pergunta ", React.createElement(ArrowRightIcon, null))
+                                    )
+                                )
+                            )
+                        ),
+
+                        React.createElement("div", { className: "lg:col-span-1" },
+                            React.createElement(Scoreboard, { players: internalPlayers, currentStage: currentStage, currentQuestionNum: (currentQuestionIndex % QUESTIONS_PER_STAGE) + 1 })
+                        )
+                    )
+                )
+            );
+        };
+
+        /**
+         * Componente: GameOverScreen
+         * Tela final, exibindo o vencedor e o placar final.
+         */
+        const GameOverScreen = ({ players, onRestart }) => {
+            const { playSound } = React.useContext(AudioContext);
+            const sortedPlayers = React.useMemo(() => [...players].sort((a, b) => b.score - a.score), [players]);
+            const winner = sortedPlayers[0];
+
+            return (
+                React.createElement("div", { className: "w-full max-w-2xl mx-auto p-8 bg-content-light dark:bg-content-dark rounded-2xl card-base border border-border-color-light dark:border-border-color-dark text-center relative overflow-hidden animate-fade-in" },
+                    React.createElement("div", { className: "confetti-container" },
+                        React.createElement("div", { className: "confetti" }),
+                        React.createElement("div", { className: "confetti-2" }),
+                        React.createElement("div", { className: "confetti-3" })
+                    ),
+                    React.createElement(TrophyIcon, null),
+                    React.createElement("h2", { className: "text-3xl font-bold text-arremaq-orange dark:text-arremaq-orange-lighter mt-4 drop-shadow-md" }, "Fim do Desafio!"),
+                    React.createElement("p", { className: "text-lg text-text-body-light dark:text-text-body-dark mt-2" }, "Parabéns ao grande campeão:"),
+                    React.createElement("h3", { className: "text-4xl font-bold text-aa-green dark:text-aa-green-lighter my-4 animate-score-pop drop-shadow-lg" }, "🏁 ", winner.name, " 🏁"),
+                    React.createElement("p", { className: "text-xl font-semibold text-text-body-light dark:text-text-body-dark mb-6" }, winner.score, " pontos!"),
+
+                    React.createElement("div", { className: "w-full bg-cards-section-light dark:bg-cards-section-dark p-6 rounded-xl shadow-inner mt-8 z-10 relative border border-border-color-light dark:border-border-color-dark" },
+                        React.createElement("h4", { className: "text-2xl font-bold mb-4 text-aa-dark-blue dark:text-text-headings-dark" }, "Placar Final"),
+                        React.createElement("ul", { className: "space-y-2 text-left" },
+                            sortedPlayers.map((player, index) => (
+                                React.createElement("li", { key: index, className: `flex justify-between items-center p-3 rounded-md shadow-sm transition-all duration-300 ${index === 0 ? 'bg-arremaq-orange-pastel dark:bg-arremaq-orange-darkest/20 font-bold text-arremaq-orange-darker dark:text-arremaq-orange-lighter shadow-md' : 'bg-content-light dark:bg-content-dark text-text-body-light dark:text-text-body-dark'} border ${index === 0 ? 'border-arremaq-orange-lighter dark:border-arremaq-orange-darker' : 'border-border-color-light dark:border-border-color-dark'}` },
+                                    React.createElement("span", { className: "flex items-center" },
+                                        index === 0 && React.createElement(StarIcon, { className: "text-arremaq-orange mr-2 dark:text-arremaq-orange-lighter" }),
+                                        index + 1, ". ", player.name
+                                    ),
+                                    React.createElement("span", { className: "font-bold text-lg" }, player.score, " pts")
+                                )
+                            ))
+                        )
+                    ),
+                    React.createElement("button", { onClick: () => { playSound('click'); onRestart(); }, className: "mt-8 btn btn-primary z-10 relative" },
+                        "Jogar Novamente!"
+                    )
+                )
+            );
+        };
+
+        // =====================================================================
+        // Função auxiliar para renderizar o estado do jogo
+        // =====================================================================
+        const renderGameState = (gameState, players, handleSetupComplete, handleQuizEnd, handleRestart) => {
+            switch (gameState) {
+                case 'quiz': return React.createElement(QuizScreen, { players: players, onQuizEnd: handleQuizEnd });
+                case 'gameover': return React.createElement(GameOverScreen, { players: players, onRestart: handleRestart });
+                default: return React.createElement(PlayerSetup, { onSetupComplete: handleSetupComplete });
+            }
+        };
+
+        // =====================================================================
+        // COMPONENTE PRINCIPAL DA APLICAÇÃO (React Root)
+        // =====================================================================
+        function QuizApp() {
+            const [gameState, setGameState] = React.useState('setup'); // 'setup', 'quiz', 'gameover'
+            const [players, setPlayers] = React.useState([]);
+
+            const handleSetupComplete = (playerData) => { setPlayers(playerData); setGameState('quiz'); };
+            const handleQuizEnd = (finalPlayers) => { setPlayers(finalPlayers); setGameState('gameover'); };
+            const handleRestart = () => { setPlayers([]); setGameState('setup'); };
+
+            return (
+                React.createElement(AudioProvider, null,
+                    React.createElement("div", { className: "w-full flex flex-col items-center justify-center p-4 font-primary" },
+                        renderGameState(gameState, players, handleSetupComplete, handleQuizEnd, handleRestart)
+                    )
+                )
+            );
+        }
+
+        // Renderiza o componente React no DOM
+        const quizRoot = ReactDOM.createRoot(document.getElementById('quiz-app-root'));
+        quizRoot.render(React.createElement(QuizApp, null));
+
+        // Listener para o botão "VOLTAR AO GUIA ESTRATÉGICO"
+        document.querySelector('.back-to-manual-pitstop-detalhes').addEventListener('click', () => {
+            showSection('manual-pitstop-detalhes-section');
+        });
+
+        initializeNavigation(); // Habilita a navegação global
+    });
+    </script>
+</body>
+</html>

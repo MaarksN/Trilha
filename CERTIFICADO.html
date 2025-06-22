@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado de Conclusão - Auto Arremate®</title>
+    <link rel="stylesheet" href="../src/assets/css/design-tokens.css">
+    <link rel="stylesheet" href="../src/assets/css/base.css">
+    <link rel="stylesheet" href="../src/assets/css/components.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    </head>
+<body class="bg-main-light dark:bg-main-dark flex items-center justify-center min-h-screen p-4">
+
+    <div class="accessibility-controls">
+        <button id="increaseFontBtn" class="accessibility-btn" aria-label="Aumentar tamanho da fonte" title="Aumentar Fonte">
+            <i class="fas fa-search-plus"></i>
+        </button>
+        <button id="decreaseFontBtn" class="accessibility-btn" aria-label="Diminuir tamanho da fonte" title="Diminuir Fonte">
+            <i class="fas fa-search-minus"></i>
+        </button>
+        <button id="readPageBtn" class="accessibility-btn" aria-label="Ler página em voz alta" title="Ler Página">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <div id="certificateContainer" class="card-base certificate-container">
+        <div class="logo-container">
+            <img src="https://www.autoarremate.com.br/wp-content/uploads/2022/09/logo-horizontal-padrao.svg"
+                 alt="Logotipo Auto Arremate"
+                 class="company-logo"
+                 onerror="this.onerror=null; this.src='https://placehold.co/150x40/ffffff/16B097?text=Auto+Arremate&font=manrope'; this.alt='Logotipo Auto Arremate Indisponível';">
+            <img src="https://www.arremaq.com.br/wp-content/uploads/2021/01/Logotipo-Arremaqsuperbid.png"
+                 alt="Logotipo Arremaq"
+                 class="company-logo"
+                 onerror="this.onerror=null; this.src='https://placehold.co/150x40/ffffff/FF8C00?text=Arremaq&font=manrope'; this.alt='Logotipo Arremaq Indisponível';">
+        </div>
+
+        <h1 class="playbook-content-title certificate-header">
+            <i class="fas fa-trophy text-arremaq-orange dark:text-arremaq-orange-lighter"></i> Certificado de Conclusão <i class="fas fa-trophy text-arremaq-orange dark:text-arremaq-orange-lighter"></i>
+        </h1>
+
+        <div class="certificate-body text-body-light dark:text-body-dark">
+            <p><i class="fas fa-scroll text-text-muted-light dark:text-text-muted-dark mr-2"></i> Este certificado é concedido a</p>
+            <span id="userName" class="highlight-title text-aa-green dark:text-aa-green-lighter">Nome do Participante</span>
+
+            <div class="certificate-info-item text-text-muted-light dark:text-text-muted-dark">
+                <i class="fas fa-briefcase text-text-muted-light dark:text-text-muted-dark"></i> Cargo: <span id="userPosition" class="font-semibold ml-1"></span>
+            </div>
+            <div class="certificate-info-item text-text-muted-light dark:text-text-muted-dark">
+                <i class="fas fa-calendar-alt text-text-muted-light dark:text-text-muted-dark"></i> Início na Empresa: <span id="userEntryDate" class="font-semibold ml-1"></span>
+            </div>
+
+            <p class="mt-4"><i class="fas fa-book-open text-text-muted-light dark:text-text-muted-dark mr-2"></i> pela conclusão bem-sucedida da Trilha de Aprendizado Auto Arremate® 2025.</p>
+
+            <div class="certificate-info-item mt-4 text-text-muted-light dark:text-text-muted-dark">
+                <i class="fas fa-calendar-check text-text-muted-light dark:text-text-muted-dark"></i> Concluído em: <span id="completionDate" class="font-semibold ml-1"></span>
+            </div>
+
+            <p class="certificate-footer text-text-body-light dark:text-text-body-dark mt-6">
+                <i class="fas fa-rocket text-arremaq-orange dark:text-arremaq-orange-lighter mr-2"></i> Continue a acelerar os seus resultados com o conhecimento adquirido!
+            </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-center mt-8 nav-buttons-container">
+            <button id="downloadBtn" class="btn btn-primary">
+                <i class="fas fa-download"></i> Baixar Certificado (PNG)
+            </button>
+            <button id="closeBtn" class="btn btn-outline ml-0 sm:ml-4 mt-4 sm:mt-0">
+                <i class="fas fa-times-circle"></i> Fechar
+            </button>
+        </div>
+    </div>
+
+    <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Alternar tema" title="Alternar Tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script type="module" defer>
+        // Importar as funções dos arquivos JavaScript globais
+        import { initializeAudio, playSound, localStorageManager } from '../src/assets/js/utils.js';
+        import { initializeThemeManager } from '../src/assets/js/theme-manager.js';
+        import { initializeAccessibilityControls } from '../src/assets/js/accessibility-manager.js';
+        import { showSection, initializeNavigation } from '../src/assets/js/navigation-manager.js';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeAudio(); // Inicializa o contexto de áudio
+            initializeThemeManager('themeToggleBtn');
+            initializeAccessibilityControls('increaseFontBtn', 'decreaseFontBtn', 'readPageBtn', 'certificateContainer'); // Área de leitura é o container do certificado
+
+            const userNameEl = document.getElementById('userName');
+            const userPositionEl = document.getElementById('userPosition');
+            const userEntryDateEl = document.getElementById('userEntryDate');
+            const completionDateEl = document.getElementById('completionDate');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const closeBtn = document.getElementById('closeBtn');
+
+            // Função para formatar a data para dd/mm/aaaa
+            function formatDate(dateString) {
+                if (!dateString) return 'Não Informada';
+                const date = new Date(dateString + 'T00:00:00'); // Garante que o fuso horário não altere a data
+                if (isNaN(date.getTime())) { // Verifica se a data é inválida
+                    return 'Data Inválida';
+                }
+                const day = String(date.getDate()).padStart(2, '0');
+                const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês é 0-indexed
+                const year = date.getFullYear();
+                return `${day}/${month}/${year}`;
+            }
+
+            // Carregar dados do usuário do localStorage
+            const storedUserData = localStorageManager('trilhaUserData');
+            if (storedUserData) {
+                userNameEl.textContent = storedUserData.fullName || 'Participante';
+                userPositionEl.textContent = storedUserData.position || 'Não Informado';
+                userEntryDateEl.textContent = formatDate(storedUserData.entryDate);
+            } else {
+                userNameEl.textContent = 'Visitante';
+                userPositionEl.textContent = 'Não Informado';
+                userEntryDateEl.textContent = 'Não Informada';
+                console.warn('Dados do usuário não encontrados no localStorage.');
+            }
+
+            // Definir a data de conclusão como a data atual
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0'); // Mês é 0-indexed
+            const year = today.getFullYear();
+            completionDateEl.textContent = `${day}/${month}/${year}`;
+
+            // Funcionalidade de download do certificado
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', async function() {
+                    playSound('click'); // Feedback sonoro
+                    const certificateContainer = document.getElementById('certificateContainer');
+
+                    // Esconde os botões e controles de acessibilidade/tema para a captura da imagem
+                    const elementsToHide = document.querySelectorAll('.nav-buttons-container, .accessibility-controls, .theme-toggle-btn');
+                    elementsToHide.forEach(el => el.classList.add('hidden'));
+
+                    // Garante que os logos sejam visíveis (caso o onerror tenha atuado)
+                    document.querySelectorAll('.company-logo').forEach(logo => {
+                        if (logo.complete && logo.naturalHeight !== 0) {
+                            logo.style.display = 'block'; // Garante que estejam visíveis
+                        } else {
+                            // Se a imagem real falhou, tenta mostrar a placeholder novamente
+                            logo.src = logo.getAttribute('onerror').match(/this\.src='(.*?)'/)[1];
+                            logo.style.display = 'block';
+                        }
+                    });
+
+                    // Pequeno atraso para garantir que todas as classes 'hidden' sejam aplicadas antes da captura
+                    await new Promise(resolve => setTimeout(resolve, 50));
+
+                    html2canvas(certificateContainer, {
+                        scale: 2, // Aumenta a resolução da imagem capturada
+                        useCORS: true, // Permite carregar imagens de outras origens, se houver
+                        logging: true,
+                        backgroundColor: null // Para capturar o fundo transparente se desejar
+                    }).then(function(canvas) {
+                        const image = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
+                        const link = document.createElement('a');
+                        link.download = 'Certificado_AutoArremate_Conclusao.png';
+                        link.href = image;
+                        document.body.appendChild(link); // Anexa para poder clicar
+                        link.click();
+                        document.body.removeChild(link); // Remove após o clique
+                    }).catch(error => {
+                        console.error('Erro ao gerar certificado:', error);
+                        alert('Não foi possível gerar o certificado. Tente novamente.');
+                    }).finally(() => {
+                        // Restaura a visibilidade dos botões e controles após a captura
+                        elementsToHide.forEach(el => el.classList.remove('hidden'));
+                    });
+                });
+            }
+
+            // Funcionalidade do botão Fechar
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    playSound('click'); // Feedback sonoro
+                    // Ao clicar em fechar, navega de volta para o menu principal
+                    showSection('menu-principal-section'); // Assumindo o ID do menu principal
+                });
+            }
+            initializeNavigation(); // Habilita a navegação global
+        });
+    </script>
+</body>
+</html>

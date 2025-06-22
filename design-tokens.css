@@ -1,0 +1,88 @@
+/* =============================================
+ * design-tokens.css
+ * CSS Variables (Color Palette & Fonts)
+ * ============================================= */
+:root {
+    /* Cores Principais Auto Arremate */
+    --aa-green: #16B097;
+    --aa-dark-blue: #1C2E42;
+    --aa-light-gray: #AEB0B2;
+    --aa-medium-gray: #6c7a89;
+    --aa-white: #FFFFFF;
+    --aa-black: #000000;
+    --aa-green-darker: #0F8A7E;
+    --aa-green-lighter: #D2F3EC;
+    --aa-green-pastel: #f0fdfa;
+    --aa-dark-blue-lighter: #2C4A6B;
+    --aa-green-darkest: #17575c;
+
+    /* Cores Principais Arremaq */
+    --arremaq-orange: #FF8C00;
+    --arremaq-orange-darker: #D97706;
+    --arremaq-orange-lighter: #FFD073;
+    --arremaq-orange-pastel: #fffbeb;
+    --arremaq-orange-darkest: #6b3e00;
+
+    /* Cores para Tema Escuro (Texto e UI) */
+    --aa-green-text-dark-theme: #2DD4BF; /* Verde para texto em fundo escuro */
+    --arremaq-orange-text-dark-theme: #FDBA74; /* Laranja para texto em fundo escuro */
+
+    /* Fundos */
+    --bg-main-light: var(--aa-green-pastel); /* Fundo geral tema claro */
+    --bg-main-dark: #0a121c; /* Fundo geral tema escuro */
+    --bg-content-light: var(--aa-white); /* Fundo de componentes/cards tema claro */
+    --bg-content-dark: #1e293b; /* Fundo de componentes/cards tema escuro */
+    --bg-cards-section-light: #f0f4f8; /* Fundo para seções de cards tema claro */
+    --bg-cards-section-dark: #111827; /* Fundo para seções de cards tema escuro */
+
+    /* Textos */
+    --text-headings-light: var(--aa-dark-blue); /* Títulos tema claro */
+    --text-headings-dark: var(--aa-green-lighter); /* Títulos tema escuro */
+    --text-body-light: #334155; /* Corpo de texto tema claro */
+    --text-body-dark: #cbd5e1; /* Corpo de texto tema escuro */
+    --text-muted-light: #616161; /* Texto secundário/apagado tema claro */
+    --text-muted-dark: #94a3b8; /* Texto secundário/apagado tema escuro */
+    --text-on-brand-primary: var(--aa-white); /* Texto sobre cor primária */
+    --text-on-brand-secondary: var(--aa-white); /* Texto sobre cor secundária */
+
+    /* Bordas */
+    --border-color-light: #e2e8f0; /* Cor da borda tema claro */
+    --border-color-dark: #334155; /* Cor da borda tema escuro */
+
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+    /* Raios de Borda */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px; /* Para círculos */
+    --radius-button: 0.75rem; /* Raio padrão para botões */
+    --radius-card: 1.25rem; /* Raio padrão para cards */
+
+    /* Transições */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-medium: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+    --transition-main: var(--transition-medium); /* Transição padrão */
+
+    /* Fontes */
+    --font-primary: 'Manrope', sans-serif; /* Fonte principal do corpo de texto */
+    --font-headings: 'Sora', sans-serif; /* Fonte para títulos e destaques */
+    --font-special: 'IBM Plex Sans', sans-serif; /* Fonte para usos específicos, como códigos ou números */
+
+    /* Espaçamentos (baseados em múltiplos de 0.25rem ou 4px para consistência) */
+    --spacing-xs: 0.5rem;   /* 8px */
+    --spacing-sm: 0.75rem;  /* 12px */
+    --spacing-md: 1rem;     /* 16px */
+    --spacing-lg: 1.5rem;   /* 24px */
+    --spacing-xl: 2rem;     /* 32px */
+    --spacing-2xl: 2.5rem;  /* 40px */
+    --spacing-3xl: 3rem;    /* 48px */
+}
